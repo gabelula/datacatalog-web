@@ -1,12 +1,12 @@
 <% if @wiki %>
   <div id="docs" class="module">
-    <h3>All Revisions</h3>
+    <h3><%=t(:text_all_revisions)%></h3>
     <ul id="version_list">
       <% @wiki.versions.each do |version| -%>
         <% content_tag_for :li, version do %>
           <% content_tag :span, :class => (version == @current_version ? "current" : "") do %>
             <%= link_to time_ago_in_words(version.updated_at), data_record_wiki_path(@data_record, :version => version.version) %>
-              ago by <%= version.user.display_name %>
+              <%=t(:text_ago_by)%><%= version.user.display_name %>
           <% end %>
         <% end %>
       <% end %>

@@ -1,8 +1,8 @@
 <% content_for :title do %>
-  Submission from <%= @submission.user ? @submission.user.display_name : @submission.name %>
+  <%=t(:text_submission_from)%><%= @submission.user ? @submission.user.display_name : @submission.name %>
 <% end %>
 
-<% content_for :body_class do %>admin<% end %>
+<% content_for :body_class do %><%=t(:text_admin)%><% end %>
 
 <% content_for :tabs do %>
   <%= render 'admin/tabs' %>
@@ -11,17 +11,17 @@
 <div id="ltColumn">
   <%= show_flash_message %>
 
-  <h3>Comments</h3>
+  <h3><%=t(:text_comments)%></h3>
   <p><%= simple_format @submission.comments %></p>
 
-  <h3>User Details</h3>
+  <h3><%=t(:text_user_details)%></h3>
   <% if user = @submission.user -%>
-  <p><%= link_to user.display_name, user %> &lt;<%= link_to user.email, "mailto:#{user.email}" %>&gt;</p>
+  <p><%= link_to user.display_name, user %><%=t(:text_lt)%><%= link_to user.email, "mailto:#{user.email}" %><%=t(:text_gt)%></p>
   <% else -%>
-  <p><%= @submission.name %> &lt;<%= link_to @submission.email, "mailto:#{@submission.email}" %>&gt;</p>
+  <p><%= @submission.name %><%=t(:text_lt)%><%= link_to @submission.email, "mailto:#{@submission.email}" %><%=t(:text_gt)%></p>
   <% end # if user -%>
 
-  <h3>Status</h3>
+  <h3><%=t(:text_status)%></h3>
   <% form_for @submission, :url => admin_contact_submission_path(@submission.id), :method => :put do |form| %>
     <%= form.error_messages :header_message => "Uh-oh!", :message => "The following problems occurred:" %>
     <ul>
@@ -30,7 +30,7 @@
           <%= form.select :status, ['Unread', 'Read', 'Archived'] %>
       </li>
       <button class="update" id="user_submit" type="submit" value="Update" name="commit">
-        <span>Update</span>
+        <span><%=t(:text_update)%></span>
       </button>
     </ul>
   <% end %>

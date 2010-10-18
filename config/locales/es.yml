@@ -1,0 +1,238 @@
+--- 
+es: 
+  label_about: About
+  label_account_settings: "Account Settings"
+  label_add_data: "Add Data"
+  label_add_new: "Add New"
+  label_add_new_organization: "Add New Organization"
+  label_add_new_source: "Add New Source"
+  label_admin: Admin
+  label_blog: Blog
+  label_browse: Browse
+  label_community_docs: "Community Docs"
+  label_confirm_password: "Confirm Password"
+  label_contact: Contact
+  label_contact_form: "contact form"
+  label_contact_us_submissions: "Contact Us Submissions"
+  label_dashboard: Dashboard
+  label_data_details: "Data Details"
+  label_data_sources: "Data Sources"
+  label_delete: Delete
+  label_edit_and_improve_the_documentation: "edit and improve the documentation"
+  label_favorite_this_data_source: "Favorite this Data Source"
+  label_national_data_catalog: "National Data Catalog"
+  label_notes: Notes
+  label_organizations: Organizations
+  label_private_notes: "Private Notes"
+  label_remove_as_favorite: "Remove as Favorite"
+  label_reply_to_this: "Reply to This"
+  label_report_a_problem: "Report a Problem"
+  label_sign_in: "Sign In"
+  label_sign_out: "Sign Out"
+  label_sign_up: "sign up"
+  label_signing_up: "Signing up"
+  label_update: Update
+  label_user_accounts: "User Accounts"
+  label_view_all: "View all"
+  label_writing_it: "writing it"
+  text_: ”
+  text_10: "10"
+  text_2005_toxics_release_inventory_data_for_guam: "2005 Toxics Release Inventory data for Guam"
+  text_2005_toxics_release_inventory_data_for_puerto_rico: "2005 Toxics Release Inventory data for Puerto Rico"
+  text_2005_toxics_release_inventory_data_for_the_district_of_columbia: "2005 Toxics Release Inventory data for the District of Columbia"
+  text_8230: "&#8230;"
+  text_a_project_of_the_sunlight_foundation: "A project of the Sunlight Foundation"
+  text_about: about
+  text_about_the_national_data_catalog: "About the National Data Catalog"
+  text_account_settings: "Account Settings"
+  text_acronym: Acronym
+  text_add: Add
+  text_add_a_tag: "Add a Tag"
+  text_add_data: add_data
+  text_add_data_source: "Add Data Source"
+  text_add_organization: "Add Organization"
+  text_added_on: "Added On"
+  text_admin: admin
+  text_admin_area: "Admin Area"
+  text_admins: Admins
+  text_ago: ago
+  text_ago_by: "ago by"
+  text_all_revisions: "All Revisions"
+  text_and_data_importers: ", and data importers."
+  text_and_the: "and the"
+  text_and_the_sunlight_foundation_and_its_partners: "and the Sunlight Foundation and its partners."
+  text_and_was_last_updated: "and was last updated"
+  text_api: API
+  text_at_the: "at the"
+  text_attached_documents: "Attached Documents"
+  text_author: Author
+  text_authors: Authors
+  text_averaged_from: "(averaged from"
+  text_blog: Blog
+  text_browse: browse
+  text_by: by
+  text_by_tag: "by tag \""
+  text_chemical_pollution: "Chemical Pollution"
+  text_comments: Comments
+  text_comments_raquo: "Comments &raquo;"
+  text_community_documentation: "- Community Documentation"
+  text_contact_details_to_request_more_information: "Contact Details to Request More Information"
+  text_contact_us: "Contact Us"
+  text_contact_us_submissions: "Contact Us Submissions"
+  text_create_user: "Create User"
+  text_current_favorite: "Current Favorite"
+  text_current_file: "Current File:"
+  text_dashboard: dashboard
+  text_data_from: "Data from “"
+  text_data_gov: Data.Gov
+  text_data_source: "Data Source"
+  text_data_sources: "Data Sources"
+  text_date: Date
+  text_date_added: "Date Added"
+  text_dc_data_catalog: "DC Data Catalog"
+  text_delete: Delete?
+  text_detail_lgheader: "detail lgHeader"
+  text_detail_organization: "detail organization"
+  text_discussion: Discussion
+  text_downloads: Downloads
+  text_edit_api_key: "Edit API Key"
+  text_edit_data_record: "Edit Data Record"
+  text_email: Email
+  text_enter_in_a_name_or_email_address: "Enter in a name or email address."
+  text_enter_in_a_new_password: "Enter in a new password."
+  text_epa: EPA
+  text_error: error
+  text_example_usages: "- Example Usages"
+  text_favorite_this_data: "Favorite This Data"
+  text_files_available_for_download: "Files Available for Download"
+  text_filter_data: "Filter Data"
+  text_first: first.
+  text_for_an_account_on_the_national_data_catalog_allows_you_to_mark_data_sources_as_favorites_participate_in_discussions_and_contribute_to_documentation_it_also_gives_you_an_api_key_for_programmatic_access: "for an account on the National Data Catalog allows you to mark data sources as favorites, participate in discussions, and contribute to documentation. It also gives you an API key for programmatic access."
+  text_for_developers_and_researchers_signing_up_is_the_only_way_to_obtain_api_keys_for_programmatic_access_to_the_national_data_catalog: "For developers and researchers, signing up is the only way to obtain API keys for programmatic access to the National Data Catalog."
+  text_for_some: "for some."
+  text_forgot_password: "Forgot Password?"
+  text_founded_in_2006_the_sunlight_foundation_uses_cutting_edge_technology_and_ideas_to_make_government_transparent_and_accountable_through_its_projects_and_grant_making_sunlight_serves_as_a_catalyst_to_create_greater_political_transparency_and_to_foster_more_openness_and_accountability_in_government_visit: "Founded in 2006, the Sunlight Foundation uses cutting-edge technology and ideas to make government transparent and accountable. Through its projects and grant-making, Sunlight serves as a catalyst to create greater political transparency and to foster more openness and accountability in government. Visit"
+  text_funder: Funder
+  text_generate_api_key: "Generate API Key"
+  text_generate_new_api_key: "Generate New API Key"
+  text_geographical_coverage: "Geographical Coverage"
+  text_gt: "&gt;"
+  text_have_a_question_or_comment_about_the_site_submit_it_below: "Have a question or comment about the site? Submit it below."
+  text_have_some_findings_to_share_run_across_something_that_was_missing_or_broken_please_leave_us_a_comment_below: "Have some findings to share? Run across something that was missing or broken? Please leave us a comment below."
+  text_have_your_own_input: "Have your own input?"
+  text_help_us: "Help us"
+  text_highest_rated_data: "Highest Rated Data"
+  text_home: home
+  text_homepage_url: "Homepage URL"
+  text_if_you_have_a_question_about_a_particular_data_source_use_the_comment_or_report_a_problem_tool_on_that_data_source_s_page: "If you have a question about a particular data source, use the Comment or Report a Problem tool on that data source's page."
+  text_it_consists_of_a_web_application_an: ". It consists of a web application, an"
+  text_james1251: james1251
+  text_jan_14_2009: "Jan. 14, 2009"
+  text_latest_activity: "Latest Activity"
+  text_lead_organization: "Lead Organization"
+  text_lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_curabitur_ut_bibendum_ante_morbi_risus_elit_porta_sit_ametmattis_fermentum_fringilla_id_augue_donec_pretium_venenatis_lorem_quis_sagittis_lacus_elementum_sit_amet_aenean_euismod_placerat_tortor_vitae_luctus: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut bibendum ante. Morbi risus elit, porta sit ametmattis fermentum, fringilla id augue. Donec pretium venenatis lorem, quis sagittis lacus elementum sit amet. Aenean euismod placerat tortor vitae luctus."
+  text_lt: "&lt;"
+  text_manage_folders: "Manage Folders"
+  text_message: Message
+  text_ministry: Ministry
+  text_most_useful_comments: "Most Useful Comments"
+  text_move_to: "Move To"
+  text_my_favorite_data_records: "My Favorite Data Records"
+  text_my_notes_on_this_data: "My Notes on This Data"
+  text_name: Name
+  text_natdatcat_is_a_project_of_the: "NatDatCat is a project of the"
+  text_national_data_catalog: "| National Data Catalog"
+  text_new_data_source: "New Data Source"
+  text_new_organization: "New Organization"
+  text_new_user: "New User"
+  text_no_account_yet: "No account yet?"
+  text_no_results_found_try_searching_again: "No results found! Try searching again."
+  text_note_from: "Note from"
+  text_notes: Notes
+  text_open_alpha: "Open Alpha"
+  text_open_government_data: "Open Government Data"
+  text_open_source: "open source"
+  text_openid_sign_in: "OpenID Sign In"
+  text_openid_sign_up: "OpenID Sign Up"
+  text_or_use_openid: "Or, use OpenID"
+  text_organizations: Organizations
+  text_other_institutional_collaborators: "Other Institutional Collaborators"
+  text_our_catalog_contains: "Our catalog contains"
+  text_our_software_platform_is: ". Our software platform is"
+  text_overall_rating: "Overall Rating"
+  text_overview: Overview
+  text_page_not_found: "Page Not Found"
+  text_phone: Phone
+  text_post_comment: "Post Comment"
+  text_private_notes: "- Private Notes"
+  text_profile: profile
+  text_project_name: "Project Name"
+  text_public_pages: "Public Pages"
+  text_publication_year: "Publication Year"
+  text_quick_links: "Quick Links"
+  text_rating: Rating
+  text_recent_data: "Recent Data"
+  text_refine_search: "Refine Search"
+  text_registered_users: "registered users."
+  text_remove_as_favorite: "Remove as Favorite"
+  text_reports_a_problem_in_the_data: "Reports a Problem in the Data"
+  text_reset_your_password: "Reset Your Password"
+  text_results_for: "Results for “"
+  text_save_notes: "Save Notes"
+  text_search: Search
+  text_search_for_user: "Search for User"
+  text_search_the_catalog: "Search the Catalog"
+  text_select: Select
+  text_send_reset: "Send Reset"
+  text_separate_names_with_commas: "Separate names with commas."
+  text_server_error: "Server Error"
+  text_sign_in: "Sign In"
+  text_sign_in_lgheader: "sign_in lgHeader"
+  text_sign_in_with_openid: "Sign In With OpenID"
+  text_sign_up: "Sign Up"
+  text_sign_up_lgheader: "sign_up lgHeader"
+  text_sign_up_the_old_fashioned_way: "Sign up the old-fashioned way"
+  text_sign_up_with_openid: "Sign Up With OpenID"
+  text_similar_data_sets: "Similar Data Sets"
+  text_sorry_but_this_page_does_not_exist_please_double_check_the_url: "Sorry, but this page does not exist. Please double-check the URL."
+  text_standard_sign_in: "Standard Sign In"
+  text_standard_sign_up: "Standard Sign Up"
+  text_start: Start
+  text_stats: Stats
+  text_status: Status
+  text_submission: submission
+  text_submission_from: "Submission from"
+  text_submit: Submit
+  text_submitted_by: "Submitted By"
+  text_sunlight_foundation: "Sunlight Foundation"
+  text_sunlight_labs: "Sunlight Labs"
+  text_sunlightfoundation_com: SunlightFoundation.com
+  text_tags: Tags
+  text_the_national_data_catalog_is_a_project_of_the: "The National Data Catalog is a project of the"
+  text_the_national_data_catalog_is_an_open_interactive_catalog_of_government_data_sets: "The National Data Catalog is an open, interactive catalog of government data sets."
+  text_the_national_data_catalog_is_an_open_platform_for_government_data_sets_and_apis_it_makes_it_easy_to_find_datasets_by_and_about_government_across_all_levels_federal_state_and_local_and_across_all_branches_executive_legislative_and_judicial_the_data_here_is_imported_from_multiple_sources_and_curated_by_our_staff: "The National Data Catalog is an open platform for government data sets and APIs. It makes it easy to find datasets by and about government, across all levels (federal, state, and local) and across all branches (executive, legislative, and judicial). The data here is imported from multiple sources and curated by our staff."
+  text_the_national_data_catalog_natdatcat_is_an_open_platform_for_government_data_sets_and_apis_natdatcat_makes_it_easy_to_find_datasets_by_and_about_government_across_all_levels_federal_state_and_local_and_across_all_branches_executive_legislative_and_judicial_the_data_here_is_imported_from_several_sources_and_curated_by_our_staff_currently_we_have_importers_setup_for: "The National Data Catalog (NatDatCat) is an open platform for government data sets and APIs. NatDatCat makes it easy to find datasets by and about government, across all levels (federal, state, and local) and across all branches (executive, legislative, and judicial). The data here is imported from several sources and curated by our staff. Currently, we have importers setup for"
+  text_the_platform_consists_of_an_api_and_a_web_application_the_source_code_is_open_source_and_the_data_is_freely_available_via_our_api: ". The platform consists of an API and a Web application. The source code is open source and the data is freely available via our API."
+  text_there_are: "There are"
+  text_this_comment: "This Comment:"
+  text_this_data_source_doesn_t_have_any_documentation_yet: "This data source doesn't have any documentation yet."
+  text_this_site_is_currently_in_an_open_alpha_there_will_be_bugs_please_report_feedback_and_problems_via_the: "This site is currently in an open alpha. There will be bugs. Please report feedback and problems via the"
+  text_title: Title
+  text_to_learn_more: "to learn more."
+  text_to_leave_a_comment_or_report_a_problem_with_this_data_you_must: "To leave a comment or report a problem with this data, you must"
+  text_tri_reporting: "TRI Reporting"
+  text_update: Update
+  text_user_accounts: "User Accounts"
+  text_user_accounts_editing: "User Accounts : Editing"
+  text_user_details: "User Details"
+  text_vote_this_comment_up: "Vote This Comment Up"
+  text_want_to_keep_some_private_notes_on_this_data_source: "Want to keep some private notes on this data source?"
+  text_we_aggregate_sources_from: "We aggregate sources from:"
+  text_we_ll_email_you_instructions_on_how_to_reset_your_password: "We'll email you instructions on how to reset your password."
+  text_we_re_sorry_but_something_has_gone_wrong_we_ve_been_notified_of_the_problem: "We're sorry, but something has gone wrong. We've been notified of the problem."
+  text_why_sign_up: "Why Sign Up?"
+  text_will_be_auto_generated_if_left_blank: "Will be auto-generated if left blank."
+  text_with_an_account_on_the_national_data_catalog_you_ll_be_able_to_mark_data_sources_as_favorites_participate_in_discussions_and_contribute_to_documentation: "With an account on the National Data Catalog, you'll be able to mark data sources as favorites, participate in discussions, and contribute to documentation."
+  text_you_have_no_favorites_yet: "You have no favorites yet."
+  text_you_ll_need_to: "You'll need to"
+  text_your_rating: "Your Rating"

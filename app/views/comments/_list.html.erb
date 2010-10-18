@@ -6,13 +6,13 @@
       <div class="commentMetaData">
         <%= gravatar_for author, :class => "userAvatar", :size => 37 %>
         <span class="commentDate"><%= comment.created_at.strftime('%b %d, %Y @ %H:%M') %></span>
-        <span class="author">by <%= author.display_name %></span>
+        <span class="author"><%=t(:text_by)%><%= author.display_name %></span>
       </div>
       <div class="rating">
         <% unless comment.voted_by_user?(current_user) %>
           <% form_for [@data_record, comment, comment.votes.new] do |form| %>
             <button title="Vote This Comment Up" class="thumbUp" type="submit">
-              <span>Vote This Comment Up</span>
+              <span><%=t(:text_vote_this_comment_up)%></span>
             </button>
           <% end %>
         <% end %>
@@ -23,7 +23,7 @@
         <%= markdownize comment.body %>
       </div>
       <div class="commentFooter">
-        <%= link_to "Reply to This", data_record_path(@data_record, :parent_id => comment.id, :anchor => "comment_form") %>
+        <%= link_to t(:label_reply_to_this), data_record_path(@data_record, :parent_id => comment.id, :anchor => "comment_form") %>
       </div>
       <div class="clear"></div>
       <% if comment.children.any? -%>

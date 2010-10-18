@@ -1,8 +1,8 @@
 <% content_for :title do %>
-  User Accounts
+  <%=t(:text_user_accounts)%>
 <% end %>
 
-<% content_for :body_class do %>admin<% end %>
+<% content_for :body_class do %><%=t(:text_admin)%><% end %>
 
 <% content_for :tabs do %>
   <%= render 'admin/tabs' %>
@@ -13,23 +13,23 @@
 
   <% if @term.blank? -%>
     <h3>
-      There are <%= total_users %> registered users.
-      <%= link_to "Add New", new_admin_user_path %>
+      <%=t(:text_there_are)%><%= total_users %><%=t(:text_registered_users)%>
+      <%= link_to t(:label_add_new), new_admin_user_path %>
     </h3>
   <% else -%>
     <h3>
-      There are <%= @users.length %> results for: <%= @term %>.
-      <%= link_to "Add New", new_admin_user_path %>
+      <%=t(:text_there_are)%><%= @users.length %><%=t(:text_results_for)%><%= @term %>.
+      <%= link_to t(:label_add_new), new_admin_user_path %>
     </h3>
   <% end -%>
 
     <table id="usersTable">
       <thead>
         <tr id="titles">
-          <th>Name</th>
-          <th>Email</th>
-          <th>Latest Activity</th>
-          <th>Delete?</th>
+          <th><%=t(:text_name)%></th>
+          <th><%=t(:text_email)%></th>
+          <th><%=t(:text_latest_activity)%></th>
+          <th><%=t(:text_delete)%></th>
         </tr>
       </thead>
       <tbody>
@@ -38,7 +38,7 @@
           <td><%= link_to user.display_name, admin_user_path(user) %></td>
           <td><%= link_to user.email, "mailto:#{user.email}" %></td>
           <td><%= user.last_request_at ? time_ago_in_words(user.last_request_at) + " ago" : "never" %>
-          <td><%= link_to "Delete", admin_user_path(user), :method => :delete, :class => "deleteIcon", :alert => "Are you sure?" %></td>
+          <td><%= link_to t(:label_delete), admin_user_path(user), :method => :delete, :class => "deleteIcon", :alert => "Are you sure?" %></td>
         </tr>
         <% end # User.all.each -%>
       </tbody>
@@ -48,18 +48,18 @@
   <div id="rtColumn" class="withBg">
 
     <div id="search" class="module">
-      <h3>Search for User</h3>
+      <h3><%=t(:text_search_for_user)%></h3>
       <% form_tag admin_users_path, :method => :get do -%>
         <input id="searchInput" type="text" name="search" />
         <button class="search" type="submit">
-          <span>Search</span>
+          <span><%=t(:text_search)%></span>
         </button>
       <% end -%>
-      <p class="tip">Enter in a name or email address.</p>
+      <p class="tip"><%=t(:text_enter_in_a_name_or_email_address)%></p>
     </div>
     
     <div id="adminUsers" class="module">
-      <h3>Admins</h3>
+      <h3><%=t(:text_admins)%></h3>
      
       <ul class="adminUsers">
         <% @admins.each do |user| %>

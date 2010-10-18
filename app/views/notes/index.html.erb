@@ -1,7 +1,7 @@
-<% content_for :body_class do %>detail lgHeader<% end %>
+<% content_for :body_class do %><%=t(:text_detail_lgheader)%><% end %>
 
 <% content_for :title do %>
-  <%= @data_record.title %> - Private Notes
+  <%= @data_record.title %><%=t(:text_private_notes)%>
 <% end %>
 
 <%= render 'shared/data_record_tabs' %>
@@ -11,7 +11,7 @@
 
   <% @notes.each do |note| %>
     <div class="note_module">
-      <h3>Note from <%= note.created_at.to_s(:mdy_slashed) %></h3>
+      <h3><%=t(:text_note_from)%><%= note.created_at.to_s(:mdy_slashed) %></h3>
         <%= markdownize note.text %>
     </div>
   <% end %>

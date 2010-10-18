@@ -1,7 +1,7 @@
 <% content_for :title do %>
-  Server Error
+  <%=t(:text_server_error)%>
 <% end %>
 
-<% content_for :body_class do %>error<% end %>
+<% content_for :body_class do %><%=t(:text_error)%><% end %>
 
-<p>We're sorry, but something has gone wrong. We've been notified of the problem.</p>
+<p><%=t(:text_we_re_sorry_but_something_has_gone_wrong_we_ve_been_notified_of_the_problem)%></p>

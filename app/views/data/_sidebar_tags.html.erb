@@ -1,15 +1,15 @@
 <div id="tags" class="module">
-  <h3>Tags</h3>
+  <h3><%=t(:text_tags)%></h3>
   <ul>
-    <li><a href="#">Chemical Pollution</a></li>
-    <li><a href="#">EPA</a></li>
-    <li><a href="#">TRI Reporting</a></li>
+    <li><a href="#"><%=t(:text_chemical_pollution)%></a></li>
+    <li><a href="#"><%=t(:text_epa)%></a></li>
+    <li><a href="#"><%=t(:text_tri_reporting)%></a></li>
   </ul>
-  <a class="allLink" id="addTagLink" href="#">Add a Tag</a>
+  <a class="allLink" id="addTagLink" href="#"><%=t(:text_add_a_tag)%></a>
   <div id="addTag">
     <input id="addTagInput" type="text" name="word" />
     <button class="addTag" type="submit">
-      <span>Add</span>
+      <span><%=t(:text_add)%></span>
     </button>
   </div>
 </div>

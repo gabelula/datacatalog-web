@@ -1,7 +1,7 @@
-<% content_for :body_class do %>blog<% end %>
+<% content_for :body_class do %><%=t(:text_blog)%><% end %>
 
 <% content_for :title do %>
-  Blog
+  <%=t(:text_blog)%>
 <% end %>
 
 <div id="ltColumn">
@@ -14,7 +14,7 @@
     <h3><%= entry.title %></h3>
     <div id="blog_content">
       <%= entry.summary %>
-      <a class="allLink" href="<%= entry.url %>#comments">Comments &raquo;</a>
+      <a class="allLink" href="<%= entry.url %>#comments"><%=t(:text_comments_raquo)%></a>
     </div>
     <div class="clear"></div>
   </div>

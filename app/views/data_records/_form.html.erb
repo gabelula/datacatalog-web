@@ -40,7 +40,7 @@
   <li>
     <%= form.label :collaborator_list, "Other Institutional Collaborators" %>
     <%= form.text_field :collaborator_list %>
-    <p class="tip">Separate names with commas.</p>
+    <p class="tip"><%=t(:text_separate_names_with_commas)%></p>
   </li>
   <li>
     <%= form.label :homepage_url, "Homepage URL" %>
@@ -48,7 +48,7 @@
   </li>
 </ul>
 
-<h2>Authors</h2>
+<h2><%=t(:text_authors)%></h2>
 <ul id="authors">
   <% form.fields_for :authors do |author_form| %>
     <li>
@@ -92,7 +92,7 @@
   </li>
 </ul>
 
-<h2>Attached Documents</h2>
+<h2><%=t(:text_attached_documents)%></h2>
 <ul id="documents_fields">
   <% form.fields_for :documents do |document_form| %>
     <li>
@@ -117,7 +117,7 @@
           <%= document_form.file_field :file, :class => "required" %>
           <% if document_form.object.file_file_name.present? %>
             <span class="current_file">
-              Current File: <%= link_to document_form.object.file_file_name, document_form.object.download_url %>
+              <%=t(:text_current_file)%><%= link_to document_form.object.file_file_name, document_form.object.download_url %>
           </span>
           <% end %>
         </div>
@@ -139,7 +139,7 @@
   </li>
 </ul>
 
-<h2>Contact details to request more information</h2>
+<h2><%=t(:text_contact_details_to_request_more_information)%></h2>
 <ul>
 <% form.fields_for :contact do |contact_form| %>
   <li>

@@ -1,7 +1,7 @@
-<% content_for :body_class do %>home<% end %>
+<% content_for :body_class do %><%=t(:text_home)%><% end %>
 
 <% content_for :title do %>
-  Open Government Data
+  <%=t(:text_open_government_data)%>
 <% end %>
 
 <%= show_flash_message %>
@@ -12,16 +12,16 @@
     </div>
 
     <div id="catalogDescription">
-      <p id="featureDescription">The National Data Catalog is an open platform for government data sets and APIs. It makes it easy to find datasets by and about government, across all levels (federal, state, and local) and across all branches (executive, legislative, and judicial). The data here is imported from multiple sources and curated by our staff.</p>
+      <p id="featureDescription"><%=t(:text_the_national_data_catalog_is_an_open_platform_for_government_data_sets_and_apis_it_makes_it_easy_to_find_datasets_by_and_about_government_across_all_levels_federal_state_and_local_and_across_all_branches_executive_legislative_and_judicial_the_data_here_is_imported_from_multiple_sources_and_curated_by_our_staff)%></p>
       <p>
-        Our catalog contains
-        <%= pluralize(@source_count, "data set") %><% if @last_updated %> and was last updated <%= time_ago_in_words(@last_updated) %> ago<% end %>.
+        <%=t(:text_our_catalog_contains)%>
+        <%= pluralize(@source_count, "data set") %><% if @last_updated %><%=t(:text_and_was_last_updated)%><%= time_ago_in_words(@last_updated) %><%=t(:text_ago)%><% end %>.
         <% if @importers && @importers.length > 0 %>
-          We aggregate sources from:
+          <%=t(:text_we_aggregate_sources_from)%>
           <% @importers.each do |importer| %>
             <a href="http://<%= importer.name %>"><%= importer.name %></a>,
           <% end %>
-          and the Sunlight Foundation and its partners.
+          <%=t(:text_and_the_sunlight_foundation_and_its_partners)%>
         <% end %>
       </p>
     </div>
@@ -30,15 +30,15 @@
 <% end %>
 
 <div id="ltColumn">
-  <p><%= link_to "Signing up", signup_url %> for an account on the National Data Catalog allows you to mark data sources as favorites, participate in discussions, and contribute to documentation. It also gives you an API key for programmatic access.</p>
-  <p><a id="lg_signup" class="buttonLink" href="<%= signup_url %>">Sign Up</a></p>
-  <p>The National Data Catalog is a project of the <a href="http://sunlightlabs.org">Sunlight Labs</a> at the <a href="http://sunlightfoundation.com">Sunlight Foundation</a>. Our software platform is <a href="http://github.com/sunlightlabs">open source</a>. It consists of a web application, an <a href="http://api.nationaldatacatalog.com/docs">API</a>, and data importers.
+  <p><%= link_to t(:label_signing_up), signup_url %><%=t(:text_for_an_account_on_the_national_data_catalog_allows_you_to_mark_data_sources_as_favorites_participate_in_discussions_and_contribute_to_documentation_it_also_gives_you_an_api_key_for_programmatic_access)%></p>
+  <p><a id="lg_signup" class="buttonLink" href="<%= signup_url %>"><%=t(:text_sign_up)%></a></p>
+  <p><%=t(:text_the_national_data_catalog_is_a_project_of_the)%><a href="http://sunlightlabs.org"><%=t(:text_sunlight_labs)%></a><%=t(:text_at_the)%><a href="http://sunlightfoundation.com"><%=t(:text_sunlight_foundation)%></a><%=t(:text_our_software_platform_is)%><a href="http://github.com/sunlightlabs"><%=t(:text_open_source)%></a><%=t(:text_it_consists_of_a_web_application_an)%><a href="http://api.nationaldatacatalog.com/docs"><%=t(:text_api)%></a><%=t(:text_and_data_importers)%>
 </div>
 <div id="rtColumnWrapper">
   <div id="rtColumn">
     <div id="features" class="module">
-      <h3>Open Alpha</h3>
-      <p>This site is currently in an open alpha. There will be bugs. Please report feedback and problems via the <%= link_to "contact form", contact_path %>.</p>
+      <h3><%=t(:text_open_alpha)%></h3>
+      <p><%=t(:text_this_site_is_currently_in_an_open_alpha_there_will_be_bugs_please_report_feedback_and_problems_via_the)%><%= link_to t(:label_contact_form), contact_path %>.</p>
     </div>
   </div>
 </div>

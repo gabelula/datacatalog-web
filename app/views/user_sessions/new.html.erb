@@ -1,14 +1,14 @@
-<% content_for :body_class do %>sign_in lgHeader<% end %>
+<% content_for :body_class do %><%=t(:text_sign_in_lgheader)%><% end %>
 
 <% content_for :title do %>
-Sign In
+<%=t(:text_sign_in)%>
 <% end %>
 
 <% content_for :tabs do %>
 <div id="signin_tabs">
   <ul class="tabs">
-    <li id="nav_standard_signin"><a class="buttonLink active" href="#">Standard Sign In</a></li>
-    <li id="nav_openid_signin"><a class="buttonLink" href="#">OpenID Sign In</a></li>
+    <li id="nav_standard_signin"><a class="buttonLink active" href="#"><%=t(:text_standard_sign_in)%></a></li>
+    <li id="nav_openid_signin"><a class="buttonLink" href="#"><%=t(:text_openid_sign_in)%></a></li>
   </ul>
 </div>
 <div class="clear"></div>
@@ -38,7 +38,7 @@ Sign In
         </li>
         <li>
           <button class="signIn" id="user_session_submit" type="submit" value="Sign In" name="commit">
-            <span>Sign In</span>
+            <span><%=t(:text_sign_in)%></span>
           </button>
         </li>
       </ul>
@@ -56,7 +56,7 @@ Sign In
         </li>
         <li>
           <button class="signIn_openID" id="user_session_submit_openID" type="submit" value="Sign In Via OpenID" name="commit">
-            <span>Sign In With OpenID</span>
+            <span><%=t(:text_sign_in_with_openid)%></span>
           </button>
         </li>
       </ul>
@@ -67,8 +67,8 @@ Sign In
 
 <div id="rtColumnWrapper">
   <div id="rtColumn" class="withBg">
-    <h3>No account yet?</h3>
-    <p>You'll need to <%= link_to "sign up", signup_path %> first.</p>
+    <h3><%=t(:text_no_account_yet)%></h3>
+    <p><%=t(:text_you_ll_need_to)%><%= link_to t(:label_sign_up), signup_path %><%=t(:text_first)%></p>
   </div>
 </div>
 <div class="clear"></div>

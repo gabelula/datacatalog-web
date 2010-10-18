@@ -1,8 +1,8 @@
 <% content_for :title do %>
-  Organizations
+  <%=t(:text_organizations)%>
 <% end %>
 
-<% content_for :body_class do %>admin<% end %>
+<% content_for :body_class do %><%=t(:text_admin)%><% end %>
 
 <% content_for :tabs do %>
   <%= render 'admin/tabs' %>
@@ -15,9 +15,9 @@
   <table id="dataSources">
     <thead>
       <tr id="titles">
-        <th class="left sort">Name</th>
-        <th class="left">Acronym</th>
-        <th class="right">Date Added</th>
+        <th class="left sort"><%=t(:text_name)%></th>
+        <th class="left"><%=t(:text_acronym)%></th>
+        <th class="right"><%=t(:text_date_added)%></th>
       </tr>
     </thead>
     <tbody>

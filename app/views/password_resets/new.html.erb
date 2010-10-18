@@ -1,13 +1,13 @@
 
 <% content_for :title do %>
-Forgot Password?
+<%=t(:text_forgot_password)%>
 <% end %>
 
 <div id="ltColumn">
   <%= show_flash_message %>
 
   <div class="tab_pane">
-    <p>We'll email you instructions on how to reset your password.</p>
+    <p><%=t(:text_we_ll_email_you_instructions_on_how_to_reset_your_password)%></p>
     <% form_tag send_reset_path do -%>
     <ul id="standard_signin">
       <li>
@@ -16,7 +16,7 @@ Forgot Password?
       </li>
       <li>
         <button class="submit" id="user_session_submit" type="submit" value="Submit" name="commit">
-          <span>Send Reset</span>
+          <span><%=t(:text_send_reset)%></span>
         </button>
       </li>
     </ul>
@@ -27,8 +27,8 @@ Forgot Password?
 
 <div id="rtColumnWrapper">
   <div id="rtColumn" class="withBg">
-    <h3>No account yet?</h3>
-    <p>You'll need to <%= link_to "sign up", signup_path %> first.</p>
+    <h3><%=t(:text_no_account_yet)%></h3>
+    <p><%=t(:text_you_ll_need_to)%><%= link_to t(:label_sign_up), signup_path %><%=t(:text_first)%></p>
   </div>
 </div>
 <div class="clear"></div>

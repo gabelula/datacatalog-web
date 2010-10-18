@@ -2,13 +2,13 @@
   <% if current_user.favorite?(data_record) %>
     <% link_to data_record_favorite_path(data_record), :method => :delete do %>
       <button title="Remove as Favorite" class="iconFavorited" type="submit">
-        <span>Remove as Favorite</span>
+        <span><%=t(:text_remove_as_favorite)%></span>
       </button>
     <% end %>
   <% else %>
     <% link_to data_record_favorite_path(data_record), :method => :post do %>
       <button title="Add as Favorite" class="iconFavorite" type="submit">
-        <span>Favorite this data</span>
+        <span><%=t(:text_favorite_this_data)%></span>
       </button>
     <% end %>
   <% end %>

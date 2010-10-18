@@ -1,14 +1,14 @@
-<% content_for :body_class do %>sign_up lgHeader<% end %>
+<% content_for :body_class do %><%=t(:text_sign_up_lgheader)%><% end %>
 
 <% content_for :title do %>
-Sign Up
+<%=t(:text_sign_up)%>
 <% end %>
 
 <% content_for :tabs do %>
 <div id="signup_tabs">
   <ul class="tabs">
-    <li id="nav_standard_signup"><a class="buttonLink active" href="#">Standard Sign Up</a></li>
-    <li id="nav_openid_signup"><a class="buttonLink" href="#">OpenID Sign Up</a></li>
+    <li id="nav_standard_signup"><a class="buttonLink active" href="#"><%=t(:text_standard_sign_up)%></a></li>
+    <li id="nav_openid_signup"><a class="buttonLink" href="#"><%=t(:text_openid_sign_up)%></a></li>
   </ul>
 </div>
 <div class="clear"></div>
@@ -18,7 +18,7 @@ Sign Up
   <%= show_flash_message %>
   <div class="tab_panes">
     <div id="standard_signup" class="tab_pane">
-      <p class="tip">Sign up the old-fashioned way</p>
+      <p class="tip"><%=t(:text_sign_up_the_old_fashioned_way)%></p>
       <% if @user.openid_identifier.blank? -%>
       <% form_for @user, :url => users_path do |form| %>
       <%= form.error_messages :header_message => "Uh-oh!", :message => "The following problems occurred:" %>
@@ -26,7 +26,7 @@ Sign Up
         <%= render "form", :form => form %>
         <li>
           <button class="signUp" id="user_submit" type="submit" value="Sign Up" name="commit">
-            <span>Sign Up</span>
+            <span><%=t(:text_sign_up)%></span>
           </button>
         </li>
       </ul>
@@ -35,14 +35,14 @@ Sign Up
     </div>
 
     <div id="openid_signup" class="tab_pane">
-      <p class="tip">Or, use OpenID</p>
+      <p class="tip"><%=t(:text_or_use_openid)%></p>
       <% form_for @user, :url => users_path do |f| %>
       <%= f.error_messages :header_message => "Uh-oh!", :message => "The following problems occurred:" %>
       <ul id="openID_signup">
         <%= render :partial => "openid_form", :object => f %>
         <li>
           <button class="signUp_openID" id="user_submit_openID" type="submit" value="Sign Up via OpenID" name="commit">
-            <span>Sign Up With OpenID</span>
+            <span><%=t(:text_sign_up_with_openid)%></span>
           </button>
         </li>
       </ul>
@@ -54,9 +54,9 @@ Sign Up
 <div id="rtColumnWrapper">
   <div id="rtColumn" class="withBg">
     <div class="module">
-      <h3>Why Sign Up?</h3>
-      <p>With an account on the National Data Catalog, you'll be able to mark data sources as favorites, participate in discussions, and contribute to documentation.</p>
-      <p>For developers and researchers, signing up is the only way to obtain API keys for programmatic access to the National Data Catalog.</p>
+      <h3><%=t(:text_why_sign_up)%></h3>
+      <p><%=t(:text_with_an_account_on_the_national_data_catalog_you_ll_be_able_to_mark_data_sources_as_favorites_participate_in_discussions_and_contribute_to_documentation)%></p>
+      <p><%=t(:text_for_developers_and_researchers_signing_up_is_the_only_way_to_obtain_api_keys_for_programmatic_access_to_the_national_data_catalog)%></p>
     </div>
   </div>
 </div>

@@ -1,14 +1,14 @@
 <% content_for :title do %>
-Contact Us
+<%=t(:text_contact_us)%>
 <% end %>
 
 <div id="ltColumn">
 
   <%= show_flash_message %>
-  <% content_for :body_class do %>submission<% end %>
+  <% content_for :body_class do %><%=t(:text_submission)%><% end %>
 
-  <p>Have a question or comment about the site? Submit it below.</p>
-  <p>If you have a question about a particular data source, use the Comment or Report a Problem tool on that data source's page.</p>
+  <p><%=t(:text_have_a_question_or_comment_about_the_site_submit_it_below)%></p>
+  <p><%=t(:text_if_you_have_a_question_about_a_particular_data_source_use_the_comment_or_report_a_problem_tool_on_that_data_source_s_page)%></p>
 
   <% form_for @contact_submission, :url => contact_submission_path do |f| %>
   <%= f.error_messages custom_error_messages %>
@@ -16,7 +16,7 @@ Contact Us
     <%= render :partial => "form", :object => f %>
     <li>
       <button class="submit" id="contact_submission_submit" type="submit" value="Submit" name="commit">
-        <span>Submit</span>
+        <span><%=t(:text_submit)%></span>
       </button>
     </li>
   </ul>
@@ -27,8 +27,8 @@ Contact Us
 
 <div id="rtColumnWrapper">
   <div id="rtColumn" class="withBg">
-    <h3>About</h3>
-    <p>The National Data Catalog is a project of the <a href="http://sunlightfoundation.com">Sunlight Foundation</a>.</p>
+    <h3><%=t(:text_about)%></h3>
+    <p><%=t(:text_the_national_data_catalog_is_a_project_of_the)%><a href="http://sunlightfoundation.com"><%=t(:text_sunlight_foundation)%></a>.</p>
   </div>
 </div>
 <div class="clear"></div>    

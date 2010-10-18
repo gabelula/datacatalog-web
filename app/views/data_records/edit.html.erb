@@ -1,9 +1,9 @@
 <% content_for :title do %>
-  Edit Data Record
+  <%=t(:text_edit_data_record)%>
 <% end %>
 
 <div id="ltColumn">
-  <% content_for :body_class do %>add_data<% end %>
+  <% content_for :body_class do %><%=t(:text_add_data)%><% end %>
 
   <%= show_flash_message %>
 
@@ -13,7 +13,7 @@
     <ul>
       <li>
         <button class="submit" id="data_suggestion_submit" type="submit" value="Submit" name="commit">
-          <span>Submit</span>
+          <span><%=t(:text_submit)%></span>
         </button>
       </li>
     </ul>

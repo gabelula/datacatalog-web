@@ -2,23 +2,23 @@
 <div id="content_tabs">
   <ul>
     <li id="nav_dataDetails">
-      <%= link_to "Data Details", @data_record, :class => ("buttonLink " + active_if(:controller => "data_records")) %>
+      <%= link_to t(:label_data_details), @data_record, :class => ("buttonLink " + active_if(:controller => "data_records")) %>
     </li>
     <li id="nav_communityDocs">
-      <%= link_to "Community Docs", data_record_wiki_path(@data_record), :class => ("buttonLink " + active_if(:controller => "wikis")) %>
+      <%= link_to t(:label_community_docs), data_record_wiki_path(@data_record), :class => ("buttonLink " + active_if(:controller => "wikis")) %>
     </li>
     <% if current_user %>
       <li id="nav_privateNotes">
-        <%= link_to "Private Notes", data_record_notes_path(@data_record), :class => ("buttonLink " + active_if(:controller => "notes")) %>
+        <%= link_to t(:label_private_notes), data_record_notes_path(@data_record), :class => ("buttonLink " + active_if(:controller => "notes")) %>
       </li>
     <% end %>
   </ul>
 </div>
 
 <% if current_user == @data_record.owner || (current_user && current_user.admin?) %>
-  <%= link_to "Update", edit_data_record_path(@data_record), :id => "btn_update", :class => "buttonLink" %>
+  <%= link_to t(:label_update), edit_data_record_path(@data_record), :id => "btn_update", :class => "buttonLink" %>
 <% end %>
 
-<%= link_to "Report a Problem", data_record_path(@data_record, :anchor => "comment_form", :reports_problem => 1), :id => "btn_reportProblem", :class => "buttonLink" %>
+<%= link_to t(:label_report_a_problem), data_record_path(@data_record, :anchor => "comment_form", :reports_problem => 1), :id => "btn_reportProblem", :class => "buttonLink" %>
 <div class="clear"></div>
 <% end %>

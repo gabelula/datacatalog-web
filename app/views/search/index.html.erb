@@ -1,23 +1,23 @@
 <% content_for :title do %>
-  Results for “<%= @term %>”
+  <%=t(:text_results_for)%><%= @term %><%=t(:text_)%>
 <% end %>
 
-<% content_for :body_class do %>browse<% end %>
+<% content_for :body_class do %><%=t(:text_browse)%><% end %>
 
 <div id="column_fullWidth">
   <div class="detailBox">
     <form id="searchForm" action="/search" method="get">
-      <label>Refine Search</label>
+      <label><%=t(:text_refine_search)%></label>
       <input id="term" type="text" name="term" value="<%= @term %>"/>
       <button class="searchBtn" type="submit">
-        <span>Search the Catalog</span>
+        <span><%=t(:text_search_the_catalog)%></span>
       </button>
     </form>
     <div class="clear"></div>
   </div>
 
   <% if @sources.length == 0 -%>
-  <p>No results found! Try searching again.</p>
+  <p><%=t(:text_no_results_found_try_searching_again)%></p>
   <% else -%>
   <div class="tableNav">
     <%= render 'shared/pagination', :docs => @sources %>

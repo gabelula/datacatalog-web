@@ -1,8 +1,8 @@
 <% content_for :title do %>
-  Data Sources
+  <%=t(:text_data_sources)%>
 <% end %>
 
-<% content_for :body_class do %>admin<% end %>
+<% content_for :body_class do %><%=t(:text_admin)%><% end %>
 
 <% content_for :tabs do %>
   <%= render 'admin/tabs' %>

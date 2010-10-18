@@ -2,24 +2,24 @@
   <div id="footer">
     <div id="footerNav">
       <ul>
-        <li id="navfooter_about"><%= link_to "About", about_path %></li>
-        <li id="navfooter_contact"><%= link_to "Contact", contact_path %></li>
+        <li id="navfooter_about"><%= link_to t(:label_about), about_path %></li>
+        <li id="navfooter_contact"><%= link_to t(:label_contact), contact_path %></li>
       </ul>
     </div>
     <div id="recentData">
-      <h4>Recent Data</h4>
+      <h4><%=t(:text_recent_data)%></h4>
       <ul>
-        <li><a href="#">2005 Toxics Release Inventory data for Guam</a></li>
-        <li><a href="#">2005 Toxics Release Inventory data for Puerto Rico</a></li>
-        <li><a href="#">2005 Toxics Release Inventory data for the District of Columbia</a></li>
-        <li><a href="#">2005 Toxics Release Inventory data for Guam</a></li>
+        <li><a href="#"><%=t(:text_2005_toxics_release_inventory_data_for_guam)%></a></li>
+        <li><a href="#"><%=t(:text_2005_toxics_release_inventory_data_for_puerto_rico)%></a></li>
+        <li><a href="#"><%=t(:text_2005_toxics_release_inventory_data_for_the_district_of_columbia)%></a></li>
+        <li><a href="#"><%=t(:text_2005_toxics_release_inventory_data_for_guam)%></a></li>
       </ul>
     </div>
     <div id="HigestRatedData">
-      <h4>Highest Rated Data</h4>
+      <h4><%=t(:text_highest_rated_data)%></h4>
       <ul>
         <li>
-          <a href="#">2005 Toxics Release Inventory data for Guam</a>
+          <a href="#"><%=t(:text_2005_toxics_release_inventory_data_for_guam)%></a>
           <ul class="star-rating ratedThreeStars">
             <li class="oneStar">1</li>
             <li class="twoStars">2</li>
@@ -30,7 +30,7 @@
           <div class="clear"></div>
         </li>
         <li>
-          <a href="#">2005 Toxics Release Inventory data for Puerto Rico</a>
+          <a href="#"><%=t(:text_2005_toxics_release_inventory_data_for_puerto_rico)%></a>
           <ul class="star-rating ratedThreeStars">
             <li class="oneStar">1</li>
             <li class="twoStars">2</li>
@@ -41,7 +41,7 @@
           <div class="clear"></div>
         </li>
         <li>
-          <a href="#">2005 Toxics Release Inventory data for the District of Columbia</a>
+          <a href="#"><%=t(:text_2005_toxics_release_inventory_data_for_the_district_of_columbia)%></a>
           <ul class="star-rating ratedThreeStars">
             <li class="oneStar">1</li>
             <li class="twoStars">2</li>
@@ -52,7 +52,7 @@
           <div class="clear"></div>
         </li>
         <li>
-          <a href="#">2005 Toxics Release Inventory data for Guam</a>
+          <a href="#"><%=t(:text_2005_toxics_release_inventory_data_for_guam)%></a>
           <ul class="star-rating ratedThreeStars">
             <li class="oneStar">1</li>
             <li class="twoStars">2</li>

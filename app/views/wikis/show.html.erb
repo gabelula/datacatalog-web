@@ -1,7 +1,7 @@
-<% content_for :body_class do %>detail lgHeader<% end %>
+<% content_for :body_class do %><%=t(:text_detail_lgheader)%><% end %>
 
 <% content_for :title do %>
-  <%= @data_record.title %> - Community Documentation
+  <%= @data_record.title %><%=t(:text_community_documentation)%>
 <% end %>
 
 <%= render 'shared/data_record_tabs' %>
@@ -12,12 +12,12 @@
       <%= markdownize @current_version.body %>
     </div>
     <div class="module">
-      <h3>Have your own input?</h3>
-      <p>Help us <%= link_to "edit and improve the documentation", edit_data_record_wiki_path(@data_record) %>.</p>
+      <h3><%=t(:text_have_your_own_input)%></h3>
+      <p><%=t(:text_help_us)%><%= link_to t(:label_edit_and_improve_the_documentation), edit_data_record_wiki_path(@data_record) %>.</p>
     </div>
   <% else -%>
-    <p>This data source doesn't have any documentation yet.</p>
-    <p>Start <%= link_to "writing it", edit_data_record_wiki_path(@data_record) %>.</p>
+    <p><%=t(:text_this_data_source_doesn_t_have_any_documentation_yet)%></p>
+    <p><%=t(:text_start)%><%= link_to t(:label_writing_it), edit_data_record_wiki_path(@data_record) %>.</p>
   <% end -%>
 </div>
 

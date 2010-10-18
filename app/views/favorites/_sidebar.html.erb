@@ -1,11 +1,11 @@
 <% if current_user -%>
 <div class="module">
   <% if current_user.favorite?(@data_record) %>
-    <h3>Current Favorite</h3>
-    <%= link_to "Remove as Favorite", data_record_favorite_path(@data_record), :class => "favorited", :method => "delete" %>
+    <h3><%=t(:text_current_favorite)%></h3>
+    <%= link_to t(:label_remove_as_favorite), data_record_favorite_path(@data_record), :class => "favorited", :method => "delete" %>
   <% else -%>
-    <h3>Favorite This Data</h3>
-    <%= link_to "Favorite this Data Source", data_record_favorite_path(@data_record), :class => "favorite", :method => "post" %>
+    <h3><%=t(:text_favorite_this_data)%></h3>
+    <%= link_to t(:label_favorite_this_data_source), data_record_favorite_path(@data_record), :class => "favorite", :method => "post" %>
   <% end -%>
 </div>
 <% end -%>

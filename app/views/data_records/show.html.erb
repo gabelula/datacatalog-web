@@ -1,4 +1,4 @@
-<% content_for :body_class do %>detail lgHeader<% end %>
+<% content_for :body_class do %><%=t(:text_detail_lgheader)%><% end %>
 
 <% content_for :title do %>
   <%= @data_record.title %>
@@ -13,51 +13,51 @@
     <div class="dataDetails">
       <div id="metaDetails">
         <dl>
-          <dt>Submitted By</dt>
+          <dt><%=t(:text_submitted_by)%></dt>
           <dd><%=h @data_record.owner.display_name %></dd>
 
-          <dt>Geographical Coverage</dt>
+          <dt><%=t(:text_geographical_coverage)%></dt>
           <dd><%= @data_record.locations.map {|loc| link_to loc.name, data_records_path(:filters => { :location => loc.id }) }.join(", ") %></dd>
 
           <% if @data_record.ministry.present? %>
-            <dt>Ministry</dt>
+            <dt><%=t(:text_ministry)%></dt>
             <dd><%= link_to @data_record.ministry.display_name, data_records_path(:filters => { :ministry => @data_record.ministry.id }) %></dd>
           <% end %>
 
-          <dt>Lead Organization</dt>
+          <dt><%=t(:text_lead_organization)%></dt>
           <dd><%= link_to @data_record.lead_organization.name, @data_record.lead_organization %>
 
           <% if @data_record.collaborators.any? %>
-            <dt>Other Institutional Collaborators</dt>
+            <dt><%=t(:text_other_institutional_collaborators)%></dt>
             <dd><%= @data_record.collaborators.map {|collab| link_to collab.name, collab }.join(", ") %></dd>
           <% end %>
 
           <% if @data_record.homepage_url.present? %>
-            <dt>Homepage URL</dt>
+            <dt><%=t(:text_homepage_url)%></dt>
             <dd><%= link_to @data_record.homepage_url, @data_record.homepage_url %></dd>
           <% end %>
 
           <% if @data_record.authors.any? %>
-            <dt>Author</dt>
+            <dt><%=t(:text_author)%></dt>
             <dd>
               <%= authors_of @data_record %>
             </dd>
           <% end %>
 
           <% if @data_record.project_name.present? %>
-            <dt>Project Name</dt>
+            <dt><%=t(:text_project_name)%></dt>
             <dd><%=h @data_record.project_name %></dd>
           <% end %>
 
           <% if @data_record.funder.present? %>
-            <dt>Funder</dt>
+            <dt><%=t(:text_funder)%></dt>
             <dd><%=h @data_record.funder %></dd>
           <% end %>
 
-          <dt>Publication Year</dt>
+          <dt><%=t(:text_publication_year)%></dt>
           <dd><%= link_to @data_record.year, data_records_path(:filters => { :release_year => @data_record.year }) %></dd>
 
-          <dt>Tags</dt>
+          <dt><%=t(:text_tags)%></dt>
           <dd><%= linked_tags(@data_record) %></dd>
         </dl>
       </div>
@@ -69,7 +69,7 @@
 
     <% if @data_record.documents.any? -%>
     <div id="downloadFormats" class="dataDetails">
-      <h3>Files Available for Download</h3>
+      <h3><%=t(:text_files_available_for_download)%></h3>
       <ul>
         <% @data_record.documents.each do |document| %>
           <li><%= link_to document.document_type.upcase, document.download_url %></li>
@@ -81,18 +81,18 @@
 
 
     <div id="contact_information" class="dataDetails">
-      <h3>Contact Details to Request More Information</h3>
+      <h3><%=t(:text_contact_details_to_request_more_information)%></h3>
       <dl>
-        <dt>Name</dt>
+        <dt><%=t(:text_name)%></dt>
         <dd><%=h @data_record.contact.name %></dd>
 
         <% if @data_record.contact.email.present? %>
-          <dt>Email</dt>
+          <dt><%=t(:text_email)%></dt>
           <dd><%= mail_to @data_record.contact.email %></dd>
         <% end %>
 
         <% if @data_record.contact.phone.present? %>
-          <dt>Phone</dt>
+          <dt><%=t(:text_phone)%></dt>
           <dd><%=h @data_record.contact.phone %></dd>
         <% end %>
       </dl>

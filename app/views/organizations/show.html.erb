@@ -1,7 +1,7 @@
-<% content_for :body_class do %>detail organization<% end %>
+<% content_for :body_class do %><%=t(:text_detail_organization)%><% end %>
 
 <% content_for :title do %>
-  Data from “<%= @organization.name %>”
+  <%=t(:text_data_from)%><%= @organization.name %><%=t(:text_)%>
 <% end %>
 
 <div id="column_fullWidth">

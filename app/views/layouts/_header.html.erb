@@ -1,16 +1,16 @@
 <div id="header">
-  <h1><%= link_to "National Data Catalog", root_path %></h1>
+  <h1><%= link_to t(:label_national_data_catalog), root_path %></h1>
   <div id="utility">
     <ul>
     <% if current_user -%>
       <% if current_user.admin_or_ministry_user? -%>
-        <li id="utilityRegister"><%= link_to "Admin", admin_data_records_path %></li>
+        <li id="utilityRegister"><%= link_to t(:label_admin), admin_data_records_path %></li>
       <% end -%>
-      <li id="utilityRegister"><%= link_to "Account Settings", edit_profile_path %></li>
-      <li id="utilitySignout"><%= link_to "Sign Out", signout_path %></li>
+      <li id="utilityRegister"><%= link_to t(:label_account_settings), edit_profile_path %></li>
+      <li id="utilitySignout"><%= link_to t(:label_sign_out), signout_path %></li>
     <% else -%>
-      <li id="utilityRegister"><%= link_to "Sign Up", signup_path %></li>
-      <li id="utilitySignup"><%= link_to "Sign In", signin_path %></li>
+      <li id="utilityRegister"><%= link_to t(:label_sign_up), signup_path %></li>
+      <li id="utilitySignup"><%= link_to t(:label_sign_in), signin_path %></li>
     <% end -%>
     </ul>
     <div class="clear"></div>
@@ -18,10 +18,10 @@
 
   <div id="nav">
     <ul>
-      <li id="nav_dashboard"><%= link_to "Dashboard", dashboard_path, :class => active_if(:action => "dashboard", :current_user => true) %></li>
-      <li id="nav_browse"><%= link_to "Browse", data_records_path, :class => active_if(:controller => "data_records", :action => "index") %></li>
-      <li id="nav_add"><%= link_to "Add Data", new_data_record_path, :class => active_if(:controller => "data_records", :action => ["new", "create"]) %></li>
-      <li id="nav_blog"><%= link_to "Blog", blog_path, :class => active_if(:action => "blog") %></li>
+      <li id="nav_dashboard"><%= link_to t(:label_dashboard), dashboard_path, :class => active_if(:action => "dashboard", :current_user => true) %></li>
+      <li id="nav_browse"><%= link_to t(:label_browse), data_records_path, :class => active_if(:controller => "data_records", :action => "index") %></li>
+      <li id="nav_add"><%= link_to t(:label_add_data), new_data_record_path, :class => active_if(:controller => "data_records", :action => ["new", "create"]) %></li>
+      <li id="nav_blog"><%= link_to t(:label_blog), blog_path, :class => active_if(:action => "blog") %></li>
     </ul>
   </div>
 </div>

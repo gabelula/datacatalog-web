@@ -1,8 +1,8 @@
 <% content_for :title do %>
-  Contact Us Submissions
+  <%=t(:text_contact_us_submissions)%>
 <% end %>
 
-<% content_for :body_class do %>admin<% end %>
+<% content_for :body_class do %><%=t(:text_admin)%><% end %>
 
 <% content_for :tabs do %>
   <%= render 'admin/tabs' %>
@@ -11,9 +11,9 @@
 <div id="ltColumn">
   <div id="dashboardControls">
     <ul>
-      <li id="deleteBtn"><a class="buttonLink" href="#">Delete</a></li>
+      <li id="deleteBtn"><a class="buttonLink" href="#"><%=t(:text_delete)%></a></li>
       <li id="moveBtn">
-        <a class="buttonLink" href="#">Move To</a>
+        <a class="buttonLink" href="#"><%=t(:text_move_to)%></a>
         <div id="favoriteData_dropdown">
           <ul>
             <% @folders.each do |folder| -%>
@@ -27,7 +27,7 @@
 
             <li class="divider"></li>
             <li id="manageFolders">
-              <a class="dashboardNav" href="#">Manage Folders</a>
+              <a class="dashboardNav" href="#"><%=t(:text_manage_folders)%></a>
               <div class="clear"></div>
             </li>
           </ul>
@@ -39,10 +39,10 @@
   <table id="messagesTable">
     <thead>
       <tr id="titles">
-        <th id="selectTitle">Select</th>
-        <th class="left">Name</th>
-        <th class="left">Message</th>
-        <th class="right">Date</th>
+        <th id="selectTitle"><%=t(:text_select)%></th>
+        <th class="left"><%=t(:text_name)%></th>
+        <th class="left"><%=t(:text_message)%></th>
+        <th class="right"><%=t(:text_date)%></th>
       </tr>
     </thead>
     <tbody>

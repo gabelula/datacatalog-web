@@ -1,7 +1,7 @@
 <% content_for :title do %>
-  Page Not Found
+  <%=t(:text_page_not_found)%>
 <% end %>
 
-<% content_for :body_class do %>error<% end %>
+<% content_for :body_class do %><%=t(:text_error)%><% end %>
 
-<p>Sorry, but this page does not exist. Please double-check the URL.</p>
+<p><%=t(:text_sorry_but_this_page_does_not_exist_please_double_check_the_url)%></p>

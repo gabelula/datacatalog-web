@@ -1,22 +1,22 @@
-<% content_for :body_class do %>dashboard<% end %>
+<% content_for :body_class do %><%=t(:text_dashboard)%><% end %>
 
 <% content_for :title do %>
-  My Favorite Data Records
+  <%=t(:text_my_favorite_data_records)%>
 <% end %>
 
 <div id="ltColumn">
   <%= show_flash_message %>
   <% if current_user.favorite_records.empty? %>
   <div id="flash_notice">
-    You have no favorites yet. <%= link_to "Browse", data_records_path %> for some.
+    <%=t(:text_you_have_no_favorites_yet)%><%= link_to t(:label_browse), data_records_path %><%=t(:text_for_some)%>
   </div>
   <% end %>
   <table>
     <thead>
       <tr id="titles">
-        <th class="left">Data Source</th>
-        <th class="center">Rating</th>
-        <th class="right">Notes</th>
+        <th class="left"><%=t(:text_data_source)%></th>
+        <th class="center"><%=t(:text_rating)%></th>
+        <th class="right"><%=t(:text_notes)%></th>
       </tr>
     </thead>
     <tbody>
@@ -31,7 +31,7 @@
         </td>
         <td class="right notes">
         <% if source.annotations_by(current_user).any? %>
-          <%= link_to "Notes", data_record_notes_path(source, :anchor => "notes"), :class => "notesAvailable", :title => "Notes" %>
+          <%= link_to t(:label_notes), data_record_notes_path(source, :anchor => "notes"), :class => "notesAvailable", :title => t(:label_notes) %>
         <% end %>
         </td>
       </tr>

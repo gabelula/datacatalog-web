@@ -2,7 +2,7 @@
   <%= @source.title %>
 <% end %>
 
-<% content_for :body_class do %>admin<% end %>
+<% content_for :body_class do %><%=t(:text_admin)%><% end %>
 
 <% content_for :tabs do %>
   <%= render 'admin/tabs' %>
@@ -16,7 +16,7 @@
     <%= render 'fields', :object => f %>
     <li>
       <button class="update_admin" id="user_submit" type="submit" value="Update" name="commit">
-        <span>Update</span>
+        <span><%=t(:text_update)%></span>
       </button>
     </li>
   </ul>
@@ -27,7 +27,7 @@
 <div id="rtColumnWrapper">
   <div id="rtColumn" class="withBg">
     <div class="module">
-      <h3>Downloads</h3>
+      <h3><%=t(:text_downloads)%></h3>
       <ul>
         <% @source.downloads.each do |download| -%>
         <li><%= link_to download.format.upcase, edit_admin_source_download_path(@source.slug,extract_id(download.href)) %></li>
@@ -37,18 +37,18 @@
       <div class="clear"></div>
     </div>
     <div class="module">
-      <h3>Public Pages</h3>
+      <h3><%=t(:text_public_pages)%></h3>
       <ul>
-        <li><%= link_to "Data Details", source_path(@source.slug) %></li>
-        <li><%= link_to "Community Docs", source_docs_path(@source.slug) %></li>
+        <li><%= link_to t(:label_data_details), source_path(@source.slug) %></li>
+        <li><%= link_to t(:label_community_docs), source_docs_path(@source.slug) %></li>
       </ul>
       <div class="clear"></div>
     </div>
     <div class="module">
-      <h3>Quick Links</h3>
+      <h3><%=t(:text_quick_links)%></h3>
       <ul>
-        <li><%= link_to "Add New Source", new_admin_source_path %></li>
-        <li><%= link_to "Add New Organization", new_admin_organization_path %></li>
+        <li><%= link_to t(:label_add_new_source), new_admin_source_path %></li>
+        <li><%= link_to t(:label_add_new_organization), new_admin_organization_path %></li>
       </ul>
     </div>
   </div>

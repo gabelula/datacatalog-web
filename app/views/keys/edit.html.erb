@@ -1,8 +1,8 @@
 <% content_for :title do %>
-Edit API Key
+<%=t(:text_edit_api_key)%>
 <% end %>
 
-<% content_for :body_class do %>profile<% end %>
+<% content_for :body_class do %><%=t(:text_profile)%><% end %>
 
 <div id="ltColumn">
   <%= show_flash_message %>
@@ -12,7 +12,7 @@ Edit API Key
     <%= render :partial => "form" %>
     <li>
       <button class="update" id="user_submit" type="submit" value="Update" name="commit">
-        <span>Update</span>
+        <span><%=t(:text_update)%></span>
       </button>
     </li>
   </ul>

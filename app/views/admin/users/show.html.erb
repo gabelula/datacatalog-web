@@ -1,8 +1,8 @@
 <% content_for :title do %>
-  User Accounts : Editing <%= @user.display_name %>
+  <%=t(:text_user_accounts_editing)%><%= @user.display_name %>
 <% end %>
 
-<% content_for :body_class do %>admin<% end %>
+<% content_for :body_class do %><%=t(:text_admin)%><% end %>
 
 <% content_for :tabs do %>
   <%= render 'admin/tabs' %>
@@ -20,7 +20,7 @@
       </li>
       <%= render "users/form", :form => f, :admin => true %>
       <button class="update" id="user_submit" type="submit" value="Update" name="commit">
-        <span>Update</span>
+        <span><%=t(:text_update)%></span>
       </button>
     </ul>
   <% end %>

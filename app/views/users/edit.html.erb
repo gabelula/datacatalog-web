@@ -1,7 +1,7 @@
-<% content_for :body_class do %>profile<% end %>
+<% content_for :body_class do %><%=t(:text_profile)%><% end %>
 
 <% content_for :title do %>
-    Account Settings
+    <%=t(:text_account_settings)%>
 <% end %>
 
 <div id="ltColumn">
@@ -12,7 +12,7 @@
       <%= render "form", :form => form %>
       <li>
       <button class="update_admin" id="user_submit" type="submit" value="Update" name="commit">
-          <span>Update</span>
+          <span><%=t(:text_update)%></span>
         </button>
       </li>
     </ul>

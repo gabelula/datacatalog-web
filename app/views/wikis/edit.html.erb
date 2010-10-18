@@ -1,7 +1,7 @@
-<% content_for :body_class do %>detail lgHeader<% end %>
+<% content_for :body_class do %><%=t(:text_detail_lgheader)%><% end %>
 
 <% content_for :title do %>
-  <%= @data_record.title %> - Community Documentation
+  <%= @data_record.title %><%=t(:text_community_documentation)%>
 <% end %>
 
 <%= render 'shared/data_record_tabs' %>
@@ -11,7 +11,7 @@
   <% form_for [@data_record, @wiki], :url => data_record_wiki_path(@data_record), :html => { :method => :put } do |form| %>
     <%= form.text_area :body, :class => "full mono" %>
     <button class="update" id="user_submit" type="submit" value="Update" name="commit">
-      <span>Update</span>
+      <span><%=t(:text_update)%></span>
     </button>
   <% end %>
 

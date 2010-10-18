@@ -1,13 +1,13 @@
 
 <% content_for :title do %>
-Reset Your Password
+<%=t(:text_reset_your_password)%>
 <% end %>
 
 <div id="ltColumn">
   <%= show_flash_message %>
 
   <div class="tab_pane">
-    <p>Enter in a new password.</p>
+    <p><%=t(:text_enter_in_a_new_password)%></p>
     <% form_tag perform_reset_path do -%>
     <%= hidden_field_tag :token, params[:token] %>
     <ul id="standard_signin">
@@ -16,12 +16,12 @@ Reset Your Password
         <%= password_field_tag :password %>
       </li>
       <li>
-        <%= label_tag "Confirm Password" %>
+        <%= label_tag t(:label_confirm_password) %>
         <%= password_field_tag :password_confirmation %>
       </li>
       <li>
         <button class="submit" id="user_session_submit" type="submit" value="Submit" name="commit">
-          <span>Submit</span>
+          <span><%=t(:text_submit)%></span>
         </button>
       </li>
     </ul>
@@ -32,8 +32,8 @@ Reset Your Password
 
 <div id="rtColumnWrapper">
   <div id="rtColumn" class="withBg">
-    <h3>No account yet?</h3>
-    <p>You'll need to <%= link_to "sign up", signup_path %> first.</p>
+    <h3><%=t(:text_no_account_yet)%></h3>
+    <p><%=t(:text_you_ll_need_to)%><%= link_to t(:label_sign_up), signup_path %><%=t(:text_first)%></p>
   </div>
 </div>
 <div class="clear"></div>

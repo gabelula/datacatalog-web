@@ -1,6 +1,6 @@
 <div id="commentBox">
   <% if @comments.any? -%>
-    <h3 id="discussionTitle">Discussion</h3>
+    <h3 id="discussionTitle"><%=t(:text_discussion)%></h3>
     <span id="numberComments"><%= @data_record.comment_threads.length %></span>
     <div class="clear"></div>
     <!-- Render "Most Useful" here-->
@@ -13,7 +13,7 @@
     <% if current_user %>
       <div id="signin_to_comment" class="<%= @comment.reports_problem? ? "reports_problem" : "" %>">
         <h3 class="withTip"><%= @comment.reports_problem? ? "Report a Problem" : "Your Thoughts" %></h3>
-        <p class="tip">Have some findings to share? Run across something that was missing or broken? Please leave us a comment below.</p>
+        <p class="tip"><%=t(:text_have_some_findings_to_share_run_across_something_that_was_missing_or_broken_please_leave_us_a_comment_below)%></p>
 
         <% form_for [@data_record, @comment], :html => { :id => "comment" } do |form| %>
           <%= form.hidden_field :parent_id, :value => @comment_parent_id %>
@@ -21,21 +21,21 @@
           <%= form.text_area :body, :id => "commentTextarea", :class => "textarea full", :rows => 5, :cols => 32 %>
 
           <div id="commentReport">
-            <label id="problemLabel">This Comment:</label>
+            <label id="problemLabel"><%=t(:text_this_comment)%></label>
             <label for="comment_reports_problem">
-              <%= form.check_box :reports_problem %> Reports a Problem in the Data
+              <%= form.check_box :reports_problem %><%=t(:text_reports_a_problem_in_the_data)%>
             </label>
           </div>
 
           <button title="post" class="postComment" type="submit">
-            <span>Post Comment</span>
+            <span><%=t(:text_post_comment)%></span>
           </button>
         </div>
       <% end -%>
     <% else -%>
       <div id="signin_to_comment" class="<%= @comment.reports_problem? ? "reports_problem" : "" %>">
         <h3 class="withTip"><%= @comment.reports_problem? ? "Sign in to report a problem" : "Sign in to comment" %></h3>
-        <p class="tip">To leave a comment or report a problem with this data, you must <%= link_to "sign in", signin_url %>. No account yet? <%= link_to "Sign up", signup_url %>.</p>
+        <p class="tip"><%=t(:text_to_leave_a_comment_or_report_a_problem_with_this_data_you_must)%><%= link_to t(:label_sign_in), signin_url %><%=t(:text_no_account_yet)%><%= link_to "Sign up", signup_url %>.</p>
       </div>
     <% end -%>
   </div>
