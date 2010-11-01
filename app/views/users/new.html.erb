@@ -21,7 +21,7 @@
       <p class="tip"><%=t(:text_sign_up_the_old_fashioned_way)%></p>
       <% if @user.openid_identifier.blank? -%>
       <% form_for @user, :url => users_path do |form| %>
-      <%= form.error_messages :header_message => "Uh-oh!", :message => "The following problems occurred:" %>
+      <%= form.error_messages :header_message => "Uh-oh!", :message => t(:message_the_following_problems_occurred) %>
       <ul id="standard_signup">
         <%= render "form", :form => form %>
         <li>
@@ -37,7 +37,7 @@
     <div id="openid_signup" class="tab_pane">
       <p class="tip"><%=t(:text_or_use_openid)%></p>
       <% form_for @user, :url => users_path do |f| %>
-      <%= f.error_messages :header_message => "Uh-oh!", :message => "The following problems occurred:" %>
+      <%= f.error_messages :header_message => "Uh-oh!", :message => t(:message_the_following_problems_occurred) %>
       <ul id="openID_signup">
         <%= render :partial => "openid_form", :object => f %>
         <li>

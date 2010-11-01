@@ -171,44 +171,7 @@ $(document).ready(function(){
     checkboxContainer.before(link);
   });
 
-  // Handle Add Location for Data Records
-  $("#location_fields li:first-child").each(function() {
-    $(this).find(".remove_link, .remove_checkbox").remove();
-  });
-
-  var removeGlobalOption = function(container) {
-    container.find("option:first-child").remove(); // Global
-    container.find("option:first-child").remove(); // ----------
-    container.find("label").css({ visibility: "hidden" });
-  }
-
-  $("#location_fields").bind("fieldAdded", function(_, field) {
-    removeGlobalOption(field)
-  });
-
-  $("#location_fields").each(function() {
-    $(this).find("li:not(:first-child) label").css({ visibility: "hidden" });
-    $(this).find("li:not(:first-child):not(.add_another)").each(function() {
-      removeGlobalOption($(this))
-    });
-  });
-
-  var toggleLocationsAddAnother = function() {
-    var container = $(this).parents("#location_fields"),
-        addAnother = container.find(".add_another");
-
-    if ($(this).find("option:selected").text() == "Global") {
-      addAnother.hide();
-      container.find("li:not(.add_another):not(:first-child)").remove();
-    } else {
-      addAnother.show();
-    }
-  }
-
-  $("#location_fields select").each(toggleLocationsAddAnother);
-  $("#location_fields select").change(toggleLocationsAddAnother);
-
-  // Handle Add Author for Data Records
+ // Handle Add Author for Data Records
 
   $("#authors").bind("fieldAdded", function(_, li) {
     li.find("input[id*=affiliation]").val($("#data_record_lead_organization_name").val());

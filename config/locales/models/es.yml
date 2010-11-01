@@ -1,0 +1,21 @@
+es:
+  activerecord:
+    models:
+      data_record: "DataRecord"
+    attributes:
+      data_record:
+        title: "Título"
+        lead_organization_name: "Organización principal"
+        year: "Año"
+        owner_id: "Usuario"
+        tag_list: "Lista de etiquetas"
+        description: "Descripción"
+      location:
+        location: "Region"
+      person:
+        name: "Nombre"
+      user:
+        name: "Nombre"
+    errors:
+      messages:
+        blank: "no puede estar vacio."

@@ -1,6 +1,6 @@
 module LocationsHelper
   def all_countries_for_select
-    Location.countries.map {|c| [c.name, c.id.to_s] }.sort_by {|name, _| name }
+    Location.countries.map {|c| [t(c.name), c.id.to_s] }.sort_by {|name, _| name }
   end
 
   def all_locations_for_select(*preferential)
@@ -17,11 +17,9 @@ module LocationsHelper
 
     locations = []
     locations += preferential
-    locations << [Location.global.name, get_id[Location.global]]
+    locations << [t(Location.global.name), get_id[Location.global]]
     locations << "-------------"
-    locations += Location.continents.map {|c| [c.name, get_id[c]] }.sort_by {|name, _| name }
-    locations << "-------------"
-    locations += Location.countries.map {|c| [c.name, get_id[c]] }.sort_by {|name, _| name }
+    locations += Location.countries.map {|c| [t(c.name), get_id[c]] }.sort_by {|name, _| name }
     locations
   end
 end

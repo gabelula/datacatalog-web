@@ -16,7 +16,7 @@ When /^I press "([^\"]*)"$/ do |button|
 end
 
 When /^I follow "([^\"]*)"$/ do |link|
-  click_link(link)
+  click_link(I18n.t(link))
 end
 
 When /^I fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
@@ -109,7 +109,7 @@ When /^I attach the file at "([^\"]*)" to "([^\"]*)"$/ do |path, field|
 end
 
 Then /^I should see "([^\"]*)"$/ do |text|
-  page.should have_content(text)
+  page.should have_content(I18n.t(text))
 end
 
 Then /^I should not see "([^\"]*)"$/ do |text|

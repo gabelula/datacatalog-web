@@ -27,11 +27,8 @@ class DataRecord < ActiveRecord::Base
   before_validation_on_create :make_slug
   after_save :link_organizations
 
-  validate :at_least_one_location
-  validate :no_duplicate_locations
   validates_presence_of :description
   validates_presence_of :lead_organization_name
-  validates_presence_of :tag_list, :message => "can't be empty"
   validates_presence_of :slug, :if => :has_title?
   validates_presence_of :title
   validates_presence_of :year
@@ -148,12 +145,7 @@ class DataRecord < ActiveRecord::Base
   end
 
   def at_least_one_location
-    errors.add_to_base("Must cover at least one region.") if data_record_locations.empty?
-  end
-
-  def no_duplicate_locations
-    dupes = data_record_locations.group_by {|loc| loc.location_id }.any? {|_, list| list.size > 1 }
-    errors.add_to_base("Geographical Coverage can't have duplicates") if dupes
+    errors.add_to_base(t(:message_must_cover_at_least_one_region)) if data_record_locations.empty?
   end
 
   def link_organizations

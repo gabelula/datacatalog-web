@@ -5,14 +5,10 @@ class Location < ActiveRecord::Base
   acts_as_nested_set
 
   def self.global
-    find_by_name! "Global"
-  end
-
-  def self.continents
-    global.children
+    find_by_name! "latin_america"
   end
 
   def self.countries
-    global.leaves
+    global.children
   end
 end

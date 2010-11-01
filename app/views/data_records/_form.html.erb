@@ -1,7 +1,7 @@
 <ul>
   <% if current_user.admin? %> 
     <li>
-      <%= form.label :owner_id, "Added By" %>
+      <%= form.label :owner_id, t(:text_added_by) %>
       <%= form.select :owner_id, grouped_options_for_select(owners_for_select(current_user)), :selected => current_user.id %>
     </li>
   <% end %>
@@ -17,33 +17,23 @@
 <ul id="location_fields">
   <% form.fields_for :data_record_locations do |location_form| %>
     <li>
-      <%= location_form.label :location_id, "Geographical Coverage" %>
+      <%= location_form.label :location_id, t(:text_geographical_coverage) %>
       <%= location_form.select :location_id, all_locations_for_select(:stringify_ids => false), :disabled => "-------------" %>
-      <span class="remove_checkbox">
-        <% unless location_form.object.new_record? %>
-          <%= location_form.check_box '_destroy' %>
-          <%= location_form.label '_destroy', 'Remove' %>
-        <% end %>
-      </span>
     </li>
-
   <% end %>
-  <li class="add_another">
-    <%= link_to "+ Add Location", "javascript:" %>
-  </li>
 </ul>
 <ul>
   <li>
-    <%= form.label :lead_organization_name, "Lead Organization" %>
+    <%= form.label :lead_organization_name, t(:text_lead_organization) %>
     <%= form.text_field :lead_organization_name %>
   </li>
   <li>
-    <%= form.label :collaborator_list, "Other Institutional Collaborators" %>
+    <%= form.label :collaborator_list, t(:text_other_institutional_collaborators) %>
     <%= form.text_field :collaborator_list %>
     <p class="tip"><%=t(:text_separate_names_with_commas)%></p>
   </li>
   <li>
-    <%= form.label :homepage_url, "Homepage URL" %>
+    <%= form.label :homepage_url, t(:text_homepage_url) %>
     <%= form.text_field :homepage_url %>
   </li>
 </ul>
@@ -53,29 +43,29 @@
   <% form.fields_for :authors do |author_form| %>
     <li>
       <div>
-        <%= author_form.label :name, "Author Name" %>
+        <%= author_form.label :name, t(:text_author_name) %>
         <%= author_form.text_field :name, :class => "required" %>
       </div>
       <div>
-        <%= author_form.label :affiliation_name, "Author Affiliation" %>
+        <%= author_form.label :affiliation_name, t(:text_author_affiliation) %>
         <%= author_form.text_field :affiliation_name %>
       </div>
       <div class="remove_checkbox">
         <% unless author_form.object.new_record? %>
           <%= author_form.check_box '_destroy' %>
-          <%= author_form.label '_destroy', 'Remove' %>
+          <%= author_form.label '_destroy', t(:label_remove) %>
         <% end %>
       </div>
     </li>
   <% end %>
   <li class="add_another">
-    <%= link_to "+ Add Author", "javascript:" %>
+    <%= link_to t(:add_author), "javascript:" %>
   </li>
 </ul>
 
 <ul>
   <li>
-    <%= form.label :project_name, "Project Name" %>
+  <%= form.label :project_name, t(:text_project_name) %>
     <%= form.text_field :project_name %>
   </li>
   <li>
@@ -83,11 +73,11 @@
     <%= form.text_field:funder %>
   </li>
   <li>
-    <%= form.label :year, "Publication Year" %>
+    <%= form.label :year, t(:text_publication_year) %>
     <%= form.select :year, (1950..Date.today.year).to_a.reverse %>
   </li>
   <li>
-    <%= form.label :tag_list, "Tags" %>
+    <%= form.label :tag_list, t(:text_tags) %>
     <%= form.text_field :tag_list %>
   </li>
 </ul>
@@ -102,18 +92,18 @@
           <%= document_form.text_field :title %>
         </div>
         <div>
-          <%= document_form.label :document_type, "Type" %>
+          <%= document_form.label :document_type, t(:text_document_type) %>
           <%= document_form.select :document_type, Document::DOCUMENT_TYPES %>
         </div>
         <div class="toggle">
           <%= document_form.radio_button :storage, "upload" %>
-          <%= document_form.label :storage_upload, "Upload a file from my computer" %>
+          <%= document_form.label :storage_upload, t(:text_storage_upload) %>
 
           <%= document_form.radio_button :storage, "external" %>
-          <%= document_form.label :storage_external, "Provide an URL to an external file" %>
+          <%= document_form.label :storage_external, t(:text_storage_external) %>
         </div>
         <div class="toggable upload">
-          <%= document_form.label :file, "Upload a File" %>
+          <%= document_form.label :file, t(:text_storage_upload) %>
           <%= document_form.file_field :file, :class => "required" %>
           <% if document_form.object.file_file_name.present? %>
             <span class="current_file">
@@ -122,20 +112,20 @@
           <% end %>
         </div>
         <div class="toggable external">
-          <%= document_form.label :external_url, "External URL" %>
+          <%= document_form.label :external_url, t(:text_external_url) %>
           <%= document_form.text_field :external_url, :class => "required" %>
         </div>
         <div class="remove_checkbox">
           <% unless document_form.object.new_record? %>
             <%= document_form.check_box '_destroy' %>
-            <%= document_form.label '_destroy', 'Remove' %>
+            <%= document_form.label '_destroy', t(:label_remove) %>
           <% end %>
         </div>
       </div>
     </li>
   <% end %>
   <li class="add_another">
-    <%= link_to "+ Add Document", "javascript:" %>
+    <%= link_to t(:add_document), "javascript:" %>
   </li>
 </ul>
 
@@ -143,15 +133,15 @@
 <ul>
 <% form.fields_for :contact do |contact_form| %>
   <li>
-    <%= contact_form.label :name %>
+    <%= contact_form.label :name, t(:text_name) %>
     <%= contact_form.text_field :name %>
   </li>
   <li>
-    <%= contact_form.label :email %>
+    <%= contact_form.label :email, t(:text_email) %>
     <%= contact_form.text_field :email %>
   </li>
   <li>
-    <%= contact_form.label :phone %>
+    <%= contact_form.label :phone, t(:text_phone) %>
     <%= contact_form.text_field :phone %>
   </li>
 <% end %>

@@ -29,6 +29,6 @@ class Document < ActiveRecord::Base
   private
 
   def presence_of_file_or_url
-    errors.add_to_base("You need to either upload a file or provide an URL to the document.") if file_file_name.blank? && external_url.blank?
+    errors.add_to_base(I18n.t(:message_you_need_to_either_upload_a_file_or_provide_url)) if file_file_name.blank? && external_url.blank?
   end
 end

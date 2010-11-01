@@ -33,10 +33,10 @@ class DataRecordsController < ApplicationController
     end
 
     if @data_record.save
-      flash[:notice] = "Your Data has been submitted"
+      flash[:notice] =  t(:message_your_data_has_been_submitted)
       redirect_to @data_record
     else
-      initialize_data_record_associations
+      #initialize_data_record_associations
       render :new
     end
   end
@@ -53,7 +53,7 @@ class DataRecordsController < ApplicationController
     end
 
     if @data_record.update_attributes(params[:data_record])
-      flash[:notice] = "Your Data has been updated"
+      flash[:notice] = t(message_your_data_has_been_updated)
       redirect_to @data_record
     else
       initialize_data_record_associations
@@ -65,9 +65,9 @@ class DataRecordsController < ApplicationController
 
   def initialize_data_record_associations
     @data_record.documents.build if @data_record.documents.empty?
-    @data_record.data_record_locations.build(:location_id => Location.global.id) if @data_record.locations.empty?
     @data_record.authors.unshift Author.new(:affiliation_name => @data_record.lead_organization_name)
     @data_record.build_contact_from_owner if @data_record.contact.blank?
+    @data_record.data_record_locations.build(:location_id => Location.global.id) if @data_record.locations.empty?
   end
 
   def find_data_record
@@ -76,7 +76,7 @@ class DataRecordsController < ApplicationController
 
   def require_owner_or_admin
     unless current_user == @data_record.owner || current_user.admin?
-      flash[:notice] = "You don't have permission to do that"
+      flash[:notice] = t(:message_you_dont_have_permission_to_do_that)
       redirect_to @data_record
     end
   end

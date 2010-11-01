@@ -12,12 +12,12 @@
   <div id="comment_form">
     <% if current_user %>
       <div id="signin_to_comment" class="<%= @comment.reports_problem? ? "reports_problem" : "" %>">
-        <h3 class="withTip"><%= @comment.reports_problem? ? "Report a Problem" : "Your Thoughts" %></h3>
+        <h3 class="withTip"><%= @comment.reports_problem? ? t(:report_a_problem) : t(:your_thoughts) %></h3>
         <p class="tip"><%=t(:text_have_some_findings_to_share_run_across_something_that_was_missing_or_broken_please_leave_us_a_comment_below)%></p>
 
         <% form_for [@data_record, @comment], :html => { :id => "comment" } do |form| %>
           <%= form.hidden_field :parent_id, :value => @comment_parent_id %>
-          <%= form.label :body, "Comment", :id => "commentLabel", :for => "commentTextarea" %>
+          <%= form.label :body, t(:comment), :id => "commentLabel", :for => "commentTextarea" %>
           <%= form.text_area :body, :id => "commentTextarea", :class => "textarea full", :rows => 5, :cols => 32 %>
 
           <div id="commentReport">

@@ -7,7 +7,7 @@
 <div id="ltColumn">
   <%= show_flash_message %>
   <% form_for @user, :url => profile_path, :html => { :method => :put } do |form| %>
-    <%= form.error_messages :header_message => "Uh-oh!", :message => "The following problems occurred:" %>
+    <%= form.error_messages :header_message => "Uh-oh!", :message => t(:message_the_following_problems_occurred) %>
     <ul>
       <%= render "form", :form => form %>
       <li>
