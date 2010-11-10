@@ -7,22 +7,11 @@
 <%= show_flash_message %>
 <% content_for :feature_box do %>
   <div id="featureBox">
-    <div id="feature_video">
-      <object width="370" height="250"><param name="movie" value="http://www.youtube.com/v/szQhc1ndURY&hl=en_US&fs=1&rel=0&hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/szQhc1ndURY&hl=en_US&fs=1&rel=0&hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="370" height="250"></embed></object>
-    </div>
-
     <div id="catalogDescription">
-      <p id="featureDescription"><%=t(:text_the_national_data_catalog_is_an_open_platform_for_government_data_sets_and_apis_it_makes_it_easy_to_find_datasets_by_and_about_government_across_all_levels_federal_state_and_local_and_across_all_branches_executive_legislative_and_judicial_the_data_here_is_imported_from_multiple_sources_and_curated_by_our_staff)%></p>
+      <p id="featureDescription"><%=t(:text_the_open_data_catalog_description)%></p>
       <p>
         <%=t(:text_our_catalog_contains)%>
-        <%= pluralize(@source_count, "data set") %><% if @last_updated %><%=t(:text_and_was_last_updated)%><%= time_ago_in_words(@last_updated) %><%=t(:text_ago)%><% end %>.
-        <% if @importers && @importers.length > 0 %>
-          <%=t(:text_we_aggregate_sources_from)%>
-          <% @importers.each do |importer| %>
-            <a href="http://<%= importer.name %>"><%= importer.name %></a>,
-          <% end %>
-          <%=t(:text_and_the_sunlight_foundation_and_its_partners)%>
-        <% end %>
+        <%= pluralize(@source_count, t(:data_set)) %><% if @last_updated %><%=t(:text_and_was_last_updated)%><%= time_ago_in_words(@last_updated) %><%=t(:text_ago)%><% end %>.
       </p>
     </div>
   <div class="clear"></div>

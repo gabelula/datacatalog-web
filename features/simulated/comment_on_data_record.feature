@@ -15,7 +15,7 @@ Feature: Comment on a data record
     Then I should see my comment
 
   Scenario: File a bug report
-    When I follow "Report a Problem"
+    When I follow the translation of "label_report_a_problem"
     And I write a bug report for the data record
     And I press "Post Comment"
     Then I should see my bug report

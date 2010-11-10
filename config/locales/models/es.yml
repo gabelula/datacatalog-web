@@ -1,7 +1,7 @@
 es:
   activerecord:
     models:
-      data_record: "DataRecord"
+      data_record: "Registro de Datos"
     attributes:
       data_record:
         title: "Título"
@@ -10,12 +10,6 @@ es:
         owner_id: "Usuario"
         tag_list: "Lista de etiquetas"
         description: "Descripción"
-      location:
-        location: "Region"
-      person:
-        name: "Nombre"
-      user:
-        name: "Nombre"
     errors:
       messages:
         blank: "no puede estar vacio."

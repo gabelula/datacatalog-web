@@ -15,14 +15,14 @@ end
 
 When /^I browse to the data record's documentation$/ do
   When %Q(I go to the data record's page)
-  When %Q(I follow "Community Docs")
+  When %Q(I follow the translation of "label_community_docs")
 end
 
 When /^I write the documentation text$/ do
   if the.data_record.wiki
-    When %Q(I follow "edit and improve the documentation")
+    When %Q(I follow the translation of "label_edit_and_improve_the_documentation")
   else
-    When %Q(I follow "writing it")
+    When %Q(I follow the translation of "label_writing_it")
   end
 
   When %Q(I fill in "wiki_body" with "New Version")
@@ -33,7 +33,7 @@ When /^I browse to the (\w+) revision$/ do |position|
   version = the.data_record.wiki.versions.send(position)
 
   within :css, "#wiki_version_#{version.id}" do
-    When %Q(I follow "minute") # "\d+ minutes" OR "less than a minute"
+    When %Q(I follow the translation of "minute") # "\d+ minutes" OR "less than a minute"
   end
 end
 

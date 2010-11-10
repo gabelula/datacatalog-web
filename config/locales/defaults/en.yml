@@ -54,13 +54,10 @@ en:
   text_admin: admin
   text_admin_area: "Admin Area"
   text_admins: Admins
-  text_ago: ago
   text_ago_by: "ago by"
   text_all_revisions: "All Revisions"
   text_and_data_importers: ", and data importers."
   text_and_the: "and the"
-  text_and_the_sunlight_foundation_and_its_partners: "and the Sunlight Foundation and its partners."
-  text_and_was_last_updated: "and was last updated"
   text_api: API
   text_at_the: "at the"
   text_attached_documents: "Attached Documents"
@@ -136,7 +133,6 @@ en:
   text_ministry: Ministry
   text_most_useful_comments: "Most Useful Comments"
   text_move_to: "Move To"
-  text_my_favorite_data_records: "My Favorite Data Records"
   text_my_notes_on_this_data: "My Notes on This Data"
   text_name: Name
   text_natdatcat_is_a_project_of_the: "NatDatCat is a project of the"
@@ -149,14 +145,12 @@ en:
   text_note_from: "Note from"
   text_notes: Notes
   text_open_alpha: "Open Alpha"
-  text_open_government_data: "Open Government Data"
   text_open_source: "open source"
   text_openid_sign_in: "OpenID Sign In"
   text_openid_sign_up: "OpenID Sign Up"
   text_or_use_openid: "Or, use OpenID"
   text_organizations: Organizations
   text_other_institutional_collaborators: "Other Institutional Collaborators"
-  text_our_catalog_contains: "Our catalog contains"
   text_our_software_platform_is: ". Our software platform is"
   text_overall_rating: "Overall Rating"
   text_overview: Overview
@@ -169,7 +163,6 @@ en:
   text_public_pages: "Public Pages"
   text_publication_year: "Publication Year"
   text_quick_links: "Quick Links"
-  text_rating: Rating
   text_recent_data: "Recent Data"
   text_refine_search: "Refine Search"
   text_registered_users: " usuarios registrados."
@@ -209,7 +202,6 @@ en:
   text_tags: Tags
   text_the_national_data_catalog_is_a_project_of_the: "The National Data Catalog is a project of the"
   text_the_national_data_catalog_is_an_open_interactive_catalog_of_government_data_sets: "The National Data Catalog is an open, interactive catalog of government data sets."
-  text_the_national_data_catalog_is_an_open_platform_for_government_data_sets_and_apis_it_makes_it_easy_to_find_datasets_by_and_about_government_across_all_levels_federal_state_and_local_and_across_all_branches_executive_legislative_and_judicial_the_data_here_is_imported_from_multiple_sources_and_curated_by_our_staff: "The National Data Catalog is an open platform for government data sets and APIs. It makes it easy to find datasets by and about government, across all levels (federal, state, and local) and across all branches (executive, legislative, and judicial). The data here is imported from multiple sources and curated by our staff."
   text_the_national_data_catalog_natdatcat_is_an_open_platform_for_government_data_sets_and_apis_natdatcat_makes_it_easy_to_find_datasets_by_and_about_government_across_all_levels_federal_state_and_local_and_across_all_branches_executive_legislative_and_judicial_the_data_here_is_imported_from_several_sources_and_curated_by_our_staff_currently_we_have_importers_setup_for: "The National Data Catalog (NatDatCat) is an open platform for government data sets and APIs. NatDatCat makes it easy to find datasets by and about government, across all levels (federal, state, and local) and across all branches (executive, legislative, and judicial). The data here is imported from several sources and curated by our staff. Currently, we have importers setup for"
   text_the_platform_consists_of_an_api_and_a_web_application_the_source_code_is_open_source_and_the_data_is_freely_available_via_our_api: ". The platform consists of an API and a Web application. The source code is open source and the data is freely available via our API."
   text_there_are: "Hay "

@@ -1,0 +1,8 @@
+es:
+  text_contact_us: "Contactanos"
+  text_have_a_question_or_comment_about_the_site_submit_it_below: "Si tienes una pregunta o comentario sobre el sitio enviala mediante el formulario."
+  text_if_you_have_a_question_about_a_particular_data_source_use_the_comment_or_report_a_problem_tool_on_that_data_source_s_page: "Si tienes una pregunta sobre un dato en particular envianos tu comentario a traves de la pagina del dato."
+  name: "Nombre"
+  email_address: "Correo Electronico"
+  comments: "Comentarios"
+  comments_cant_be_blank: "Comentarios no puede estar en blanco"

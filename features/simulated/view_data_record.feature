@@ -6,7 +6,7 @@ Feature: View data record
   Background:
     Given the following data records exist:
       | title           | description | lead_organization_name | collaborator_list          | locations      | year | tag_list      |
-      | The Data Record | Lorem Ipsum | Red Cross              | Free Medic, United Nations | Europe, Africa | 2006 | foo, bar, baz | 
+      | The Data Record | Lorem Ipsum | Red Cross              | Free Medic, United Nations | Jamaica, Brazil| 2006 | foo, bar, baz | 
 
   Scenario: I see the record's attributes
     Given I am on the data record's page
@@ -14,10 +14,12 @@ Feature: View data record
     And I should see "Red Cross"
     And I should see "Free Medic"
     And I should see "United Nations"
-    And I should see "Africa"
-    And I should see "Europe"
+    And I should see "jamaica"
+    And I should see "brazil"
     And I should see "2006"
-    And I should see "baz, bar, foo"
+    And I should see "baz"
+    And I should see "bar"
+    And I should see "foo"
 
   Scenario: Clicking on a tag takes you to the filtered list view
     Given I am on the data record's page

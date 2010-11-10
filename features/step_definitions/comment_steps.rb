@@ -7,7 +7,7 @@ end
 
 When /^I write a (?:comment|bug report) for the data record$/ do
   the.comment = "Lorem Ipsum Dolor Sit Amet"
-  When %Q(I fill in "Comment" with "#{the.comment}")
+  When %Q(I fill in "comment" with "#{the.comment}")
 end
 
 When /^I vote for the (\w+) one$/ do |position|
@@ -22,10 +22,10 @@ When /^I reply to the (\w+) one$/ do |position|
   comment = the.data_record.comment_threads.send(position)
 
   within :css, "#comment_#{comment.id}" do
-    When %Q(I follow "Reply to This")
+    When %Q(I follow the translation of "label_reply_to_this")
   end
 
-  When %Q(I fill in "Comment" with "The Reply")
+  When %Q(I fill in "comment" with "The Reply")
   When %Q(I press "Post Comment")
 end
 

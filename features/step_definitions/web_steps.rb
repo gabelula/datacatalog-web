@@ -16,11 +16,16 @@ When /^I press "([^\"]*)"$/ do |button|
 end
 
 When /^I follow "([^\"]*)"$/ do |link|
-  click_link(I18n.t(link))
+  click_link(link)
 end
 
+When /^I follow the translation of "([^\"]*)"$/ do |link_key|
+  click_link(I18n.t(link_key))
+end
+
+
 When /^I fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
-  fill_in(field, :with => value)
+  fill_in(I18n.t(field), :with => value)
 end
 
 # I fill in the 2nd "Field" with "Value"
@@ -109,7 +114,12 @@ When /^I attach the file at "([^\"]*)" to "([^\"]*)"$/ do |path, field|
 end
 
 Then /^I should see "([^\"]*)"$/ do |text|
-  page.should have_content(I18n.t(text))
+  save_and_open_page
+  page.should have_content(text)
+end
+
+Then /^I should see a translation of "([^\"]*)"$/ do |key|
+  page.should have_content(I18n.t(key))
 end
 
 Then /^I should not see "([^\"]*)"$/ do |text|

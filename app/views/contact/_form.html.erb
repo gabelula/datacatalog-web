@@ -5,18 +5,18 @@
 <% else -%>
 
 <li>
-    <%= form.label :name, "Name" %>
+    <%= form.label :name, t(:name) %>
     <%= form.text_field :name %>
 </li>
 
 <li>
-    <%= form.label :email, "Email Address" %>
+    <%= form.label :email, t(:email_address) %>
     <%= form.text_field :email %>
 </li>
 
 <% end -%>
 
 <li>
-    <%= form.label :comments, "Comments" %>
+    <%= form.label :comments, t(:comments) %>
     <%= form.text_area :comments %>
 </li>
