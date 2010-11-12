@@ -21,7 +21,6 @@
       <li id="nav_dashboard"><%= link_to t(:label_dashboard), dashboard_path, :class => active_if(:action => "dashboard", :current_user => true) %></li>
       <li id="nav_browse"><%= link_to t(:label_browse), data_records_path, :class => active_if(:controller => "data_records", :action => "index") %></li>
       <li id="nav_add"><%= link_to t(:label_add_data), new_data_record_path, :class => active_if(:controller => "data_records", :action => ["new", "create"]) %></li>
-      <li id="nav_blog"><%= link_to t(:label_blog), blog_path, :class => active_if(:action => "blog") %></li>
     </ul>
   </div>
 </div>
