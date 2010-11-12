@@ -14,6 +14,7 @@
         <%= pluralize(@source_count, t(:data_set)) %><% if @last_updated %><%=t(:text_and_was_last_updated)%><%= time_ago_in_words(@last_updated) %><%=t(:text_ago)%><% end %>.
       </p>
     </div>
+    <%= image_tag("welcome_logo.png") %>
   <div class="clear"></div>
   </div>
 <% end %>
