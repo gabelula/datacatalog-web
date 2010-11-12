@@ -20,19 +20,19 @@ body {
 }
 
 div#headerWrapper { background: url(/images/headerRepeat.jpg) top left repeat-x; background-color: white; }
-div#pageMain { background: url(/images/headerMain.jpg) top left no-repeat; width: 960px; margin: 0 auto; margin-bottom: 50px; background-color: white;}
+div#pageMain {width: 960px; margin: 0 auto; margin-bottom: 50px;}
 
 h1 { float: left; width: 290px; height: 53px; padding-top: 78px;}
-h1 a { background: url(/images/logo.png) top left no-repeat; width: 290px; height: 53px; display: block; text-indent: -9999em;}
+h1 a { background: url(/images/logo.png) top left no-repeat; width: 327px; height: 40px; display: block; text-indent: -9999em;}
 
 div#header { height: 162px; margin-bottom: 40px;}
 h2 { color: #414042; font-style: oblique; font-size: 200%; font-family: Georgia, Times, Times New Roman, serif; margin-bottom: 20px; line-height:30px;}
 h2#feature_header { background: url(/images/feature_header.png) top left no-repeat; text-indent: -9999em; width: 286px; height: 180px; display: block; float: left; margin-left: 10px; margin-right: 30px;}
 div#feature_video { background: url(/images/feature_header.png) top left no-repeat; width: 370px; height: 250px; display: block; float: left; margin-left: 10px; margin-right: 30px; border: 1px solid #CECCCA;}
-div#catalogDescription { float: left; width: 500px; margin-top: 5px; margin-left: 30px; color: #978f8b; font-size: 105%;}
+div#catalogDescription { float: left; width: 500px; margin-left: 30px; color: #978f8b; font-size: 105%;}
 div#catalogDescription ul { padding: 0px 10px 10px 10px; margin-left: 15px;}
 div#catalogDescription ul li { list-style-type: disc; float: left; width: 200px; line-height: 15px; margin-bottom: 10px;}
-p#featureDescription { font-size: 130%; line-height: 25px; font-family: Georgia, Times, Times New Roman, serif; margin-top: 15px;}
+p#featureDescription { font-size: 140%; line-height: 32px; font-family: Georgia, Times, Times New Roman, serif;}
 p#featureBlurb { font-family: Georgia, Times, Times New Roman, serif; font-style: oblique; padding: 25px 50px 0; line-height: 18px; text-align: center;}
 
 h3 { color: #371d17; font-size: 160%; margin-bottom: 15px; line-height: 25px;}
@@ -49,10 +49,11 @@ select { padding: 3px; }
 
 /*utility*/
 
-div#utility { float: right; padding-top: 20px; }
+div#utility { float: right; padding-top: 5px; }
 div#utility li { float: left; margin-right: 15px; line-height: 15px; margin-top: 5px; }
-div#utility li a{ text-transform: uppercase; padding-top: 4px;}
-li#utilityRegister { border-right: 1px solid; padding-right: 15px; }
+div#utility li a{ text-transform: uppercase; color: #FFFFFF; font-weight: bold; padding-top: 4px;}
+div#utility li a:hover {text-decoration: underline;}
+li#utilityRegister { border-right: 1px solid #FFFFFF; padding-right: 15px; }
 div#utility ul { float: left; margin-right: 15px;}
 div#utility input { float: left; margin-right: 15px;}
 form#searchForm { float: left;}
@@ -61,18 +62,20 @@ a.advancedSearch_link { float: right;}
 /*nav*/
 
 div#nav { margin-left: 392px; float: right;}
-div#nav li { float: left; height: 46px; margin-top: -15px; }
-div#nav li a{ text-indent: -9999em; height: 46px; display: block;}
+div#nav li { float: left; height: 41px; margin-top: -14px; }
+div#nav li a{ text-indent: -9999em; height: 41px; display: block;}
 
-li#nav_dashboard a{ width: 123px; background: url(/images/nav_dashboard.png) top left no-repeat;}
-li#nav_dashboard a:hover, li#nav_dashboard a.active { width: 123px; background: url(/images/nav_dashboard.png) bottom left no-repeat;}
-li#nav_browse, li#nav_add, li#nav_suggest, li#nav_blog { margin-left: -2px;}
-li#nav_browse a{ width: 134px; background: url(/images/nav_browse.png) top left no-repeat;}
-li#nav_browse a:hover, li#nav_browse a.active { width: 134px; background: url(/images/nav_browse.png) bottom left no-repeat;}
-li#nav_add a{ width: 107px; background: url(/images/nav_add.png) top left no-repeat;}
-li#nav_add a:hover, li#nav_add a.active { width: 107px; background: url(/images/nav_add.png) bottom left no-repeat;}
+li#nav_dashboard a{ width: 88px; background: url(/images/nav_dashboard.png) top left no-repeat;}
+li#nav_dashboard a:hover, li#nav_dashboard a.active { width: 88px; background: url(/images/nav_dashboard.png) bottom left no-repeat;}
+li#nav_browse, li#nav_add, li#nav_suggest, li#nav_blog { margin-left: 10px;}
+li#nav_browse a{ width: 118px; background: url(/images/nav_browse.png) top left no-repeat;}
+li#nav_browse a:hover, li#nav_browse a.active { width: 118px; background: url(/images/nav_browse.png) bottom left no-repeat;}
+li#nav_add a{ width: 118px; background: url(/images/nav_add.png) top left no-repeat;}
+li#nav_add a:hover, li#nav_add a.active { width: 118px; background: url(/images/nav_add.png) bottom left no-repeat;}
+li#nav_suggest {display: none;}
 li#nav_suggest a{ width: 134px; background: url(/images/nav_suggest.png) top left no-repeat;}
 li#nav_suggest a:hover, li#nav_suggest a.active { width: 134px; background: url(/images/nav_suggest.png) bottom left no-repeat;}
+li#nav_blog {display: none;}
 li#nav_blog a{ width: 78px; background: url(/images/nav_blog.png) top left no-repeat;}
 li#nav_blog a:hover, li#nav_blog a.active { width: 78px; background: url(/images/nav_blog.png) bottom left no-repeat;}
 
@@ -393,7 +396,7 @@ button.signIn_openID { background: url(/images/btn_signIn_openID.png) top left n
 button.signUp_openID { background: url(/images/btn_signUp_openID.png) top left no-repeat; width: 172px; margin-left: 150px; margin-top: 20px; }
 button.update, a#btn_update { background: url(/images/btn_update.png) top left no-repeat; width: 93px; margin-top: 20px; }
 button.update_admin { background: url(/images/btn_update.png) top left no-repeat; width: 93px; margin-top: 20px; margin-left: 150px;}
-a#lg_signup { background: url(/images/btn_signUp_lg.png) top left no-repeat; width: 183px; height: 42px; margin: 15px auto 0;}
+a#lg_signup { background: url(/images/btn_signUp_lg.png) top left no-repeat; width: 184px; height: 42px; margin: 15px auto 0;}
 a#btn_update { float: right; margin-top: 0; margin-left: 10px; }
 
 ul.editAPI button.update { margin-left: 150px;}
