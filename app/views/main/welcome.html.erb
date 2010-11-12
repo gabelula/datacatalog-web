@@ -19,15 +19,14 @@
 <% end %>
 
 <div id="ltColumn">
-  <p><%= link_to t(:label_signing_up), signup_url %><%=t(:text_for_an_account_on_the_national_data_catalog_allows_you_to_mark_data_sources_as_favorites_participate_in_discussions_and_contribute_to_documentation_it_also_gives_you_an_api_key_for_programmatic_access)%></p>
+  <p><%= link_to t(:label_signing_up), signup_url %><%=t(:text_for_an_account)%></p>
   <p><a id="lg_signup" class="buttonLink" href="<%= signup_url %>"><%=t(:text_sign_up)%></a></p>
-  <p><%=t(:text_the_national_data_catalog_is_a_project_of_the)%><a href="http://sunlightlabs.org"><%=t(:text_sunlight_labs)%></a><%=t(:text_at_the)%><a href="http://sunlightfoundation.com"><%=t(:text_sunlight_foundation)%></a><%=t(:text_our_software_platform_is)%><a href="http://github.com/sunlightlabs"><%=t(:text_open_source)%></a><%=t(:text_it_consists_of_a_web_application_an)%><a href="http://api.nationaldatacatalog.com/docs"><%=t(:text_api)%></a><%=t(:text_and_data_importers)%>
 </div>
 <div id="rtColumnWrapper">
   <div id="rtColumn">
     <div id="features" class="module">
       <h3><%=t(:text_open_alpha)%></h3>
-      <p><%=t(:text_this_site_is_currently_in_an_open_alpha_there_will_be_bugs_please_report_feedback_and_problems_via_the)%><%= link_to t(:label_contact_form), contact_path %>.</p>
+      <p><%=t(:text_this_site_is_on_alpha)%><%= link_to t(:label_contact_form), contact_path %>.</p>
     </div>
   </div>
 </div>

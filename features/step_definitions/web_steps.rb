@@ -38,6 +38,10 @@ When /^I select "([^\"]*)" from "([^\"]*)"$/ do |value, field|
   select(value, :from => field)
 end
 
+When /^I select "([^\"]*)" from the translation of "([^\"]*)"$/ do |value, field|
+  select(value, :from => I18n.t(field))
+end
+
 # I select "Value" from the 2nd "Field"
 When /^I select "([^\"]*)" from the (\w+) "([^\"]*)"$/ do |value, position, field|
   first_field = find_field(field)
@@ -114,7 +118,6 @@ When /^I attach the file at "([^\"]*)" to "([^\"]*)"$/ do |path, field|
 end
 
 Then /^I should see "([^\"]*)"$/ do |text|
-  save_and_open_page
   page.should have_content(text)
 end
 

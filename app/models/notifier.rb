@@ -2,7 +2,7 @@ class Notifier < ActionMailer::Base
 
   def confirmation_instructions(user)
     subject       "Please confirm your account"
-    from          "National Data Catalog <natdatcat@sunlightfoundation.com>"
+    from          "Datos Abiertos <info@datosabiertos.org>"
     recipients    user.email
     sent_on       Time.now
     body          :confirmation_url => confirm_url(user.perishable_token)

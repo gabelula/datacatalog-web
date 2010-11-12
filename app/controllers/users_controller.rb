@@ -14,11 +14,11 @@ class UsersController < ApplicationController
         @user.confirm!
         @user.deliver_welcome_message!
         UserSession.create(@user)
-        flash[:notice] = "Success! You have been signed in."
+        flash[:notice] = t(:success_you_have_been_signed_in)
         redirect_to edit_profile_path
       else
         @user.deliver_confirmation_instructions!
-        flash[:notice] = "Your account has been created. Please check your email inbox to confirm your email address."
+        flash[:notice] = t(:your_account_has_been_created)
         redirect_to signin_path
       end
     else
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     @user = current_user
 
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Profile updated!"
+      flash[:notice] = t(:profile_updated)
       redirect_to edit_profile_path
     else
       render :edit
@@ -44,15 +44,15 @@ class UsersController < ApplicationController
   def confirm
     @user = User.find_using_perishable_token(params[:token], 1.month)
     if @user.nil? || @user.confirmed?
-      flash[:notice] = "No confirmation needed! Try signing in."
+      flash[:notice] = t(:no_confirmation_needed) 
       redirect_to signin_path
     elsif @user.confirm!
       @user.deliver_welcome_message!
       UserSession.create(@user)
-      flash[:notice] = "Thanks! Your email address has been confirmed and you're now signed in."
+      flash[:notice] = t(:thanks_you_are_now_signed_in) 
       redirect_to edit_profile_path
     else
-      flash[:error] = "Sorry, could not confirm the email address."
+      flash[:error] = t(:could_not_confirm_email)
       redirect_to signup_path
     end
   end

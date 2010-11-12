@@ -10,6 +10,8 @@ es:
         owner_id: "Usuario"
         tag_list: "Lista de etiquetas"
         description: "Descripción"
+      contact:
+        comments: "Comentarios"
     errors:
       messages:
         blank: "no puede estar vacio."

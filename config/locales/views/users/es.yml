@@ -1,0 +1,10 @@
+es:
+  success_you_have_been_signed_in: "Exito! Tu te has registrado."
+  profile_updated: "Configuración actualizada!"
+  no_confirmation_needed: "No necesitas confirmación! Intenta iniciar sesión." #"No confirmation needed! Try signing in."
+  thanks_you_are_now_signed_in: "Gracias! Tu email ha sido confirmado y ahora estas logueado." #"Thanks! Your email address has been confirmed and you're now signed in."
+  could_not_confirm_email: "Lo siento, no pudimos confirmar el email."  #"Sorry, could not confirm the email address."
+  text_why_signup: "Porque Registrarse?"
+  text_with_an_account: "Con una cuenta en el sitio de Datos Abiertos, tu podras marcar los datos como favoritos, participar en discusiones, clasificar los datos y contribuir a su documentación."
+  text_for_developers_and_researchers: ""
+

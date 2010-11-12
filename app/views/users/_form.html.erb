@@ -1,9 +1,9 @@
 <li>
-    <%= form.label :display_name %>
+    <%= form.label :display_name, t(:name) %>
     <%= form.text_field :display_name %>
 </li>
 <li>
-    <%= form.label :email %>
+    <%= form.label :email, t(:email) %>
     <%= form.text_field :email %>
 </li>
 
@@ -11,47 +11,42 @@
 <% if local_assigns[:admin].blank? %>
   <% if @user.openid_identifier.blank? -%>
   <li>
-      <%= form.label :password, form.object.new_record? ? nil : "Change Password" %>
+      <%= form.label :password, form.object.new_record? ? nil : t(:change_password) %>
       <%= form.password_field :password, :value => nil %>
   </li>
   <li>
-      <%= form.label :password_confirmation, 'Confirm Password' %>
+      <%= form.label :password_confirmation, t(:confirm_password) %>
       <%= form.password_field :password_confirmation, :value => nil %>
   </li>
   <% elsif !@user.new_record? %>
   <li>
-      <%= form.label :openid_identifier, 'OpenID Identifier' %>
+      <%= form.label :openid_identifier, t(:openid_identifier) %>
       <%= form.password_field :openid_identifier %>
   </li>
   <% end %>
 <% end %>
 
 <li>
-    <%= form.label :affiliation_name, 'Affiliation (optional)' %>
+    <%= form.label :affiliation_name, t(:affiliation_optional) %>
     <%= form.text_field :affiliation_name %>
 </li>
 <li>
-    <%= form.label :location_id, "Country" %>
+    <%= form.label :location_id, t(:country) %>
     <%= form.select :location_id, all_countries_for_select %>
 </li>
 <li>
-    <%= form.label :city %>
+    <%= form.label :city, t(:city) %>
     <%= form.text_field :city %>
 </li>
 <li>
-    <%= form.label :user_type, 'User Type' %>
+    <%= form.label :user_type, t(:user_type) %>
     <%= form.select :user_type, User::USER_TYPES, :include_blank => true %>
 </li>
 <li>
-    <%= form.label :personal_url, 'Site Url (optional)'%>
+    <%= form.label :personal_url, t(:site_url_optional) %>
     <%= form.text_field :personal_url %>
 </li>
 <li>
-    <%= form.label :telephone_number, 'Cell Phone (optional)'%>
+    <%= form.label :telephone_number, t(:cell_phone_optional) %>
     <%= form.text_field :telephone_number %>
-</li>
-
-<li class="signIn_cues">
-  <%= form.check_box :list_opt_in, {:class => "checkbox"} %>
-  <%= form.label :list_opt_in, 'Yes, email me updates from Population Council.', {:class => 'inline'}  %>
 </li>

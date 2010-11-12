@@ -102,7 +102,7 @@ end
 
 Then /^I should be browsing filtered by the "([^\"]+)" tag$/ do |tag|
   Then %Q(I should be on the browse page)
-  Then %Q(I should see "Browse by tag")
+  Then %Q(I should see a translation of "label_browse_by_tag")
   Then %Q(I should see a record tagged "#{tag}")
 end
 
