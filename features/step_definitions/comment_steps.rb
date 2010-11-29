@@ -1,7 +1,7 @@
 Given /^the data record has (\d+) comments?(?: with no votes)?$/ do |count|
   count.to_i.times do |i|
     When %Q(I write a comment for the data record)
-    And %Q(I press "Post Comment")
+    And %Q(I press the translation of "text_post_comment")
   end
 end
 
@@ -14,7 +14,7 @@ When /^I vote for the (\w+) one$/ do |position|
   comment = the.data_record.comment_threads.send(position)
 
   within :css, "#comment_#{comment.id}" do
-    When %Q(I press "Vote This Comment Up")
+    When %Q(I press the translation of "text_vote_this_comment_up")
   end
 end
 
@@ -26,7 +26,7 @@ When /^I reply to the (\w+) one$/ do |position|
   end
 
   When %Q(I fill in "comment" with "The Reply")
-  When %Q(I press "Post Comment")
+  When %Q(I press the translation of "text_post_comment")
 end
 
 Then /^I should see my (?:comment|bug report)$/ do

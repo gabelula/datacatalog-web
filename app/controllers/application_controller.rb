@@ -68,7 +68,7 @@ class ApplicationController < ActionController::Base
   def require_user
     unless current_user
       store_location
-      flash[:notice] = "You must be logged in to take that action."
+      flash[:notice] = t(:message_you_must_be_logged_in_to_take_that_action)
       redirect_to signin_url
     end
   end
@@ -76,7 +76,7 @@ class ApplicationController < ActionController::Base
   def require_no_user
     if current_user
       store_location
-      flash[:notice] = "You must be logged out to take that action."
+      flash[:notice] = t(:message_you_must_be_logged_in_to_take_that_action)
       redirect_to profile_url
     end
   end

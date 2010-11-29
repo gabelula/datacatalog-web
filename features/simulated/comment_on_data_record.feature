@@ -11,13 +11,13 @@ Feature: Comment on a data record
 
   Scenario: Leave a comment on the data record
     When I write a comment for the data record
-    And I press "Post Comment"
+    And I press the translation of "text_post_comment"
     Then I should see my comment
 
   Scenario: File a bug report
     When I follow the translation of "label_report_a_problem"
     And I write a bug report for the data record
-    And I press "Post Comment"
+    And I press the translation of "text_post_comment"
     Then I should see my bug report
 
   Scenario: Reply to a data record's comment

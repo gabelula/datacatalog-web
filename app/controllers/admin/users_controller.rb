@@ -35,10 +35,10 @@ class Admin::UsersController < AdminController
       @user.confirm!
       @user.deliver_admin_welcome!
 
-      flash[:notice] = "The user was created and notified."
+      flash[:notice] = t(:the_user_was_created_and_notified)
       redirect_to admin_users_path
     else
-      flash[:error] = "Error creating user"
+      flash[:error] = t(:error_creating_user)
       render :new
     end
   end

@@ -6,17 +6,17 @@ Feature: Browsing data records
   Background:
     Given the following data records exist:
       | title           | lead_organization_name  | collaborator_list | locations      | ministry             | year | tag_list                     | ratings | documents            |
-      | Child Birth 1   | Red Cross               | UN, Free Medic    | Afghanistan    | Department of Health | 2009 | health, children, birth rate | 2,3,1   | News Article, Data   |
-      | Child Birth 2   | Red Cross               | Amnesty Intl      | Afghanistan    | Department of Health | 2008 | health, children, birth rate | 5,5,4   | Data                 |
-      | AIDS 1          | Doctors Without Borders | UN                | Ghana          | Health Department    | 2008 | health, diseases             | 3,2     | Map                  |
-      | AIDS 2          | Doctors Without Borders | UN                | South Africa   | Ministry of Health   | 2010 | health, diseases             | 4       | Report               |
-      | Malaria         | Red Cross               |                   | Sudan          | Health Ministry      | 2006 | health, diseases, africa     | 1,2     | Other                |
-      | Sex Trafficking | AST                     |                   | Cyprus         |                      | 2010 | health, sex, slavery         | 0       | Journal Article, Map |
-      | Child Abuse     | United Nations          |                   | Europe         |                      | 2010 | health, children             | 3,3,4,5 | Data, Other          |
+      | Child Birth 1   | Red Cross               | UN, Free Medic    | argentina      | Department of Health | 2009 | health, children, birth rate | 2,3,1   | News Article, Data   |
+      | Child Birth 2   | Red Cross               | Amnesty Intl      | argentina      | Department of Health | 2008 | health, children, birth rate | 5,5,4   | Data                 |
+      | AIDS 1          | Doctors Without Borders | UN                | brazil         | Health Department    | 2008 | health, diseases             | 3,2     | Map                  |
+      | AIDS 2          | Doctors Without Borders | UN                | chile          | Ministry of Health   | 2010 | health, diseases             | 4       | Report               |
+      | Malaria         | Red Cross               |                   | suriname       | Health Ministry      | 2006 | health, diseases, africa     | 1,2     | Other                |
+      | Sex Trafficking | AST                     |                   | uruguay        |                      | 2010 | health, sex, slavery         | 0       | Journal Article, Map |
+      | Child Abuse     | United Nations          |                   | cuba           |                      | 2010 | health, children             | 3,3,4,5 | Data, Other          |
 
   Scenario: Viewing data records on the list without filtering
     Given I am a site visitor
-    When I follow "Browse"
+    When I follow the translation of "label_browse"
     Then I should see "Child Birth"
     And I should see "AIDS"
     And I should see "Malaria"
@@ -24,13 +24,13 @@ Feature: Browsing data records
 
   Scenario: Ministry records are listed before community records
     Given I am a site visitor
-    When I follow "Browse"
+    When I follow the translation of "label_browse"
     Then I should see ministry records before community records
 
   Scenario: Filtering by Location
     Given I am a site visitor
-    When I follow "Browse"
-    And I select "Afghanistan" from "Location"
+    When I follow the translation of "label_browse"
+    And I select "Argentina" from "Location"
     And I press "Filter Data"
     Then I should only see 2 records
     And I should see "Child Birth"
@@ -40,16 +40,16 @@ Feature: Browsing data records
 
   Scenario: Filtering by Location includes broader geographical regions
     Given I am a site visitor
-    When I follow "Browse"
-    And I select "Cyprus" from "Location"
+    When I follow the translation of "label_browse"
+    And I select "Uruguay" from "Location"
     And I press "Filter Data"
     Then I should only see 2 records
-    And I should see "Cyprus"
-    And I should see "Europe"
+    And I should see "Uruguay"
+    And I should see "Cuba"
 
   Scenario: Filtering by Ministry
     Given I am a site visitor
-    When I follow "Browse"
+    When I follow the translation of "label_browse"
     And I select "Ministry of Health" from "Ministry"
     And I press "Filter Data"
     Then I should only see 1 record
@@ -60,7 +60,7 @@ Feature: Browsing data records
 
   Scenario: Filtering by Organization
     Given I am a site visitor
-    When I follow "Browse"
+    When I follow the translation of "label_browse"
     And I select "Red Cross" from "Organization"
     And I press "Filter Data"
     Then I should only see 3 records
@@ -69,7 +69,7 @@ Feature: Browsing data records
     But I should not see "AIDS"
     And I should not see "Sex Trafficking"
     When I select "UN" from "Organization"
-    And I press "Filter Data"
+    And I press the translation of "text_filter_data"
     Then I should only see 3 records
     And I should see "Child Birth"
     And I should see "AIDS"
@@ -78,8 +78,8 @@ Feature: Browsing data records
 
   Scenario: Filtering by Release Year
     Given I am a site visitor
-    When I follow "Browse"
-    And I select "2006" from "Release Year"
+    When I follow the translation of "label_browse"
+    And I select "2006" from the translation of "label_release_year"
     And I press "Filter Data"
     Then I should only see 1 record
     And I should see "Malaria"
@@ -89,9 +89,9 @@ Feature: Browsing data records
 
   Scenario: Filtering by more than one criteria
     Given I am a site visitor
-    When I follow "Browse"
-    And I select "2008" from "Release Year"
-    And I select "Doctors Without Borders" from "Organization"
+    When I follow the translation of "label_browse"
+    And I select "2008" from the translation of "label_release_year"
+    And I select "Doctors Without Borders" from the translation of "organization"
     And I press "Filter Data"
     Then I should only see 1 record
     And I should see "AIDS"
@@ -101,12 +101,12 @@ Feature: Browsing data records
 
   Scenario: Filtering by tags
     Given I am a site visitor
-    When I follow "Browse"
+    When I follow the translation of "label_browse"
     Then I should see a record tagged "diseases"
     When I follow "diseases"
     Then I should only see 3 records
-    And I should see "Browse by tag"
-    When I follow "View all"
+    And I should see the translation of "label_browse_by_tag"
+    When I follow the translation of "label_view_all"
     Then I should see 7 records
 
   Scenario Outline: Sorting the data records
