@@ -6,11 +6,11 @@
     </li>
   <% end %>
   <li>
-    <%= form.label :title %>
+    <%= form.label :title, t(:text_title) %>
     <%= form.text_field :title %>
   </li>
   <li>
-    <%= form.label :description %>
+    <%= form.label :description, t(:text_description) %>
     <%= form.text_area :description %>
   </li>
 </ul>
@@ -69,7 +69,7 @@
     <%= form.text_field :project_name %>
   </li>
   <li>
-    <%= form.label :funder %>
+    <%= form.label :funder , t(:text_funder) %>
     <%= form.text_field:funder %>
   </li>
   <li>

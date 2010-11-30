@@ -48,7 +48,7 @@ end
 
 # I select "Value" from the 2nd "Field"
 When /^I select "([^\"]*)" from the (\w+) "([^\"]*)"$/ do |value, position, field|
-  first_field = find_field(field)
+  first_field = find_field(I18n.t(field))
   select(value, :from => first_field[:id].gsub(/_\d+_/, "_#{position.to_i - 1}_"))
 end
 
@@ -108,7 +108,7 @@ When /^I uncheck "([^\"]*)"$/ do |field|
 end
 
 When /^I choose "([^\"]*)"$/ do |field|
-  choose(field)
+  choose(I18n.t(field))
 end
 
 # I choose the 2nd "Field"
@@ -134,11 +134,11 @@ Then /^I should not see "([^\"]*)"$/ do |text|
 end
 
 Then /^the "([^\"]*)" field should contain "([^\"]*)"$/ do |field, value|
-  field_labeled(field).value.should =~ /#{value}/
+  field_labeled(I18n.t(field)).value.should =~ /#{value}/
 end
 
 Then /^the "([^\"]*)" field should not contain "([^\"]*)"$/ do |field, value|
-  field_labeled(field).value.should_not =~ /#{value}/
+  field_labeled(I18n.t(field)).value.should_not =~ /#{value}/
 end
 
 Then /^the "([^\"]*)" checkbox should be checked$/ do |label|

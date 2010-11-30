@@ -36,26 +36,26 @@ Given /^I favorited the data record$/ do
 end
 
 When /^I fill in the data record fields$/ do
-  When %Q(I fill in "Title" with "Housing Code Enforcement")
-  When %Q(I fill in "Description" with "Blah blah blah blah")
-  When %Q(I select "Uruguay" from "Geographical Coverage")
-  When %Q(I fill in "Lead Organization" with "Red Cross International")
-  When %Q(I fill in "Other Institutional Collaborators" with "Doctors Without Borders, United Nations")
-  When %Q(I fill in "Homepage URL" with "http://data.dc.gov/foo")
-  When %Q(I fill in "Project Name" with "The Project")
-  When %Q(I fill in "Funder" with "Uncle Sam")
-  When %Q(I select "2008" from "Year")
-  When %Q(I fill in "Tags" with "housing, code enforcement, something else")
+  When %Q(I fill in "text_title" with "Housing Code Enforcement")
+  When %Q(I fill in "text_description" with "Blah blah blah blah")
+  When %Q(I select "Uruguay" from the translation of "text_geographical_coverage")
+  When %Q(I fill in "text_lead_organization" with "Red Cross International")
+  When %Q(I fill in "text_other_institutional_collaborators" with "Doctors Without Borders, United Nations")
+  When %Q(I fill in "text_homepage_url" with "http://data.dc.gov/foo")
+  When %Q(I fill in "text_project_name" with "The Project")
+  When %Q(I fill in "text_funder" with "Uncle Sam")
+  When %Q(I select "2008" from the translation of "text_publication_year")
+  When %Q(I fill in "text_tags" with "housing, code enforcement, something else")
 
   # contact
-  When %Q(I fill in "Name" with "John Doe")
-  When %Q(I fill in "Phone" with "+1 (234) 567 8900")
-  When %Q(I fill in "Email" with "john.doe@example.org")
+  When %Q(I fill in "text_name" with "John Doe")
+  When %Q(I fill in "text_phone" with "+1 (234) 567 8900")
+  When %Q(I fill in "text_email" with "john.doe@example.org")
 
   # documents
-  When %Q(I choose "Provide an URL to an external file")
-  When %Q(I fill in "External URL" with "http://document.url/file.csv")
-  When %Q(I select "Data" from "Type")
+  When %Q(I choose "text_storage_external")
+  When %Q(I fill in "text_external_url" with "http://document.url/file.csv")
+  When %Q(I select "Data" from the translation of "text_document_type")
 end
 
 When /^I fill in the (\w+) author name with "([^\"]+)"$/ do |position, value|

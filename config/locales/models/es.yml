@@ -15,3 +15,7 @@ es:
     errors:
       messages:
         blank: "no puede estar vacio."
+helpers:
+  label:
+    data_record:
+      title: "Titulo"
