@@ -9,7 +9,7 @@ es:
   label_admin: "Admin"
   label_blog: "Blog"
   label_browse: "Navegar"
-  label_browse_by_tag: "Navegar por tag"
+  label_browse_by_tag: "navegar por tag"
   label_community_docs: "Documentación Comunitaria"
   label_confirm_password: "Confirmar Clave"
   label_contact: "Contactos"
@@ -257,3 +257,4 @@ es:
   the_user_was_created_and_notified: "El usuario fue creado y notificado."
   error_creating_user: "Error creando el usuario."
   label_release_year: "Año"
+  note_text: "note_text"

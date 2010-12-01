@@ -10,9 +10,9 @@ Feature: Editing data record
     Given I am a signed in admin
     When I go to the browse page
     And I follow "Child Birth"
-    And I follow "Update"
-    When I fill in "Title" with "Birth Rate"
-    And I press "Submit"
+    And I follow the translation of "label_update"
+    When I fill in "text_title" with "Birth Rate"
+    And I press the translation of "text_submit"
     Then I should see "Birth Rate"
     And I should not see "Child Birth"
 
@@ -20,9 +20,9 @@ Feature: Editing data record
     Given I am signed in as "john@doe.com"
     When I go to the browse page
     And I follow "Child Birth"
-    And I follow "Update"
-    When I fill in "Title" with "Birth Rate"
-    And I press "Submit"
+    And I follow the translation of "label_update"
+    When I fill in "text_title" with "Birth Rate"
+    And I press the translation of "text_submit"
     Then I should see "Birth Rate"
     And I should not see "Child Birth"
 
@@ -30,4 +30,4 @@ Feature: Editing data record
     Given I am a site visitor
     When I go to the browse page
     And I follow "Child Birth"
-    Then I should not see "Update"
+    Then I should not see a translation of "label_update"

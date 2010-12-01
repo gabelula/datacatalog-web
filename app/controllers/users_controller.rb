@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
 
+  require 'ruby-debug'; debugger
     if @user.save
       if @user.openid_identifier.present?
         @user.confirm!

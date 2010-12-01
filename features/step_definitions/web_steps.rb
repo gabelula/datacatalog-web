@@ -16,6 +16,7 @@ When /^I press "([^\"]*)"$/ do |button|
 end
 
 When /^I press the translation of "([^\"]*)"$/ do |button|
+  save_and_open_page
   click_button(I18n.t(button))
 end
 
@@ -132,6 +133,11 @@ end
 Then /^I should not see "([^\"]*)"$/ do |text|
   page.should_not have_content(text)
 end
+
+Then /^I should not see a translation of "([^\"]*)"$/ do |text|
+  page.should_not have_content(text)
+end
+
 
 Then /^the "([^\"]*)" field should contain "([^\"]*)"$/ do |field, value|
   field_labeled(I18n.t(field)).value.should =~ /#{value}/

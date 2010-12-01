@@ -1,17 +1,17 @@
 <li>
-  <%= form.label :name %>
+  <%= form.label :name, t(:name) %>
   <%= form.text_field :name %>
 </li>
 <li>
-  <%= form.label :acronym %>
+  <%= form.label :acronym, t(:acronym) %>
   <%= form.text_field :acronym %>
 </li>
 <li>
-  <%= form.label :parent_id, "Parent" %>
+  <%= form.label :parent_id, t(:parent) %>
   <%= form.select :parent_id, organization_tree_except(@organization), :include_blank => true %>
 </li>
 <li>
-  <%= form.label :location_id, "Country" %>
+  <%= form.label :location_id, t(:country) %>
   <%= form.select :location_id, all_countries_for_select %>
 </li>
 <li>
@@ -20,18 +20,18 @@
   <p class="tip"><%=t(:text_will_be_auto_generated_if_left_blank)%></p>
 </li>
 <li>
-  <%= form.label :url, "Website" %>
+  <%= form.label :url, t(:website) %>
   <%= form.text_field :url %>
 </li>
 <li>
-  <%= form.label :homepage_url, "Home Page" %>
+  <%= form.label :homepage_url, t(:home_page) %>
   <%= form.text_field :homepage_url %>
 </li>
 <li>
-  <%= form.label :org_type, "Type" %>
+  <%= form.label :org_type, t(:type) %>
   <%= form.select :org_type, Organization::ORGANIZATION_TYPES %>
 </li>
 <li>
-  <%= form.label :description %>
+  <%= form.label :description, t(:description) %>
   <%= form.text_area :description %>
 </li>

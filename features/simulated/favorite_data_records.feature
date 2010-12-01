@@ -10,17 +10,17 @@ Feature: Marking data records as favorites
   @javascript
   Scenario: I mark a record as a favorite
     When I go to the data record's page
-    And I follow "Favorite this Data Source"
-    Then I should see "Current Favorite"
-    And I should see "Remove as Favorite"
+    And I follow the translation of "label_favorite_this_data_source"
+    Then I should see a translation of "text_current_favorite"
+    And I should see a translation of "text_remove_as_favorite"
 
   @javascript
   Scenario: I unmark a record as a favorite
     Given I favorited the data record
     When I go to the data record's page
-    And I follow "Remove as Favorite"
-    Then I should see "Favorite this Data"
-    And I should see "Favorite this Data Source"
+    And I follow the translation of "label_remove_as_favorite"
+    Then I should see a translation of "text_favorite_this_data"
+    And I should see a translation of "label_favorite_this_data_source"
 
   Scenario: Favorite records show up in the dashboard
     Given I favorited the data record

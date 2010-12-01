@@ -4,7 +4,7 @@ end
 
 When /^I write a new note for the data record$/ do 
   When 'I fill in "note_text" with "text"'
-  And 'I press "Save Notes"'
+  And 'I press the translation of "text_save_notes"'
 end
 
 Then /^I should see my note$/ do

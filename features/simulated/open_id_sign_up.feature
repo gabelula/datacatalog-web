@@ -7,12 +7,13 @@ Feature: Sign up via OpenID
   Scenario: Sign up with OpenID
     Given I am a site visitor
     When I go to sign up
-    And I fill in "OpenID URL" with "http://johndoe.myopenid.com/"
+    And I follow the translation of "text_openid_sign_up"
+    And I fill in "openid_url" with "http://johndoe.myopenid.com/"
     And I fill in "openid_name" with "John D."
     And I fill in "openid_email" with "john@test.com"
-    And I select "Uruguay" from "openid_country"
+    And I select "Uruguay" from the translation of "openid_country"
     And I fill in "openid_city" with "Montevideo"
-    And I select "Journalist" from "openid_user_type"
-    And I press "Sign Up via OpenID"
+    And I select "Journalist" from the translation of "openid_user_type"
+    And I press the translation of "text_sign_up_with_openid"
     Then my OpenID-enabled account should be created
-    And I should see "You have been signed in"
+    And I should see a translation of "success_you_have_been_signed_in"

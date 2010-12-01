@@ -53,7 +53,7 @@ class DataRecordsController < ApplicationController
     end
 
     if @data_record.update_attributes(params[:data_record])
-      flash[:notice] = t(message_your_data_has_been_updated)
+      flash[:notice] = t(:message_your_data_has_been_updated)
       redirect_to @data_record
     else
       initialize_data_record_associations

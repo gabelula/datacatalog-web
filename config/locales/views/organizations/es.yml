@@ -1,0 +1,9 @@
+es:
+  name: "Nombre"
+  acronym: "Sigla"
+  parent: "Padre"
+  country: "Pais"
+  website: "Website"
+  type: "Tipo"
+  description: "Descripcion"
+  home_page: "Sitio Web"

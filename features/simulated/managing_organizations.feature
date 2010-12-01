@@ -10,17 +10,17 @@ Feature: Managing Organizations
 
   Scenario Outline: Admin adds an organization
     When I go to the admin dashboard
-    And I follow "Organizations"
-    When I follow "Add Organization"
-    And I fill in "Name" with "Aspiration"
-    And I fill in "Acronym" with "ASP"
-    And I select "<parent>" from "Parent"  
-    And I select "Uruguay" from "Country"  
-    And I fill in "Website" with "http://www.aspiration.org"
-    And I fill in "Home Page" with "http://www.aspiration.org"
-    And I select "Not-For-Profit" from "Type"
-    And I fill in "Description" with "This is a nice NGO."
-    And I press "Submit"
+    And I follow the translation of "label_organizations"
+    When I follow the translation of "text_add_organization"
+    And I fill in "name" with "Aspiration"
+    And I fill in "acronym" with "ASP"
+    And I select "<parent>" from the translation of "parent"  
+    And I select "Uruguay" from the translation of "country"  
+    And I fill in "website" with "http://www.aspiration.org"
+    And I fill in "home_page" with "http://www.aspiration.org"
+    And I select "Not-For-Profit" from the translation of "type"
+    And I fill in "description" with "This is a nice NGO."
+    And I press the translation of "text_submit"
     Then I should see "Aspiration"
     And the organization's parent should be "<parent>"
 
@@ -31,8 +31,8 @@ Feature: Managing Organizations
 
   Scenario: Admin edits an organization
     When I go to the admin dashboard
-    And I follow "Organizations"
+    And I follow the translation of "label_organizations"
     When I follow "Red Cross"
-    And I fill in "Name" with "Red Cross International"
-    And I press "Update"
+    And I fill in "name" with "Red Cross International"
+    And I press the translation of "label_update"
     Then I should see "Red Cross International"

@@ -1,41 +1,36 @@
 <li>
-  <%= openid_form.label :openid_identifier, 'OpenID URL' %>
+  <%= openid_form.label :openid_identifier, t(:openid_url) %>
   <%= openid_form.text_field :openid_identifier %>
 </li>
 <li>
-  <%= openid_form.label :display_name, 'Name', :for => 'openid_name' %>
+  <%= openid_form.label :display_name, t(:openid_name), :for => 'openid_name' %>
   <%= openid_form.text_field :display_name, :id => 'openid_name' %>
 </li>
 <li>
-  <%= openid_form.label :email, 'Email', :for => 'openid_email' %>
+  <%= openid_form.label :email, t(:openid_email), :for => 'openid_email' %>
   <%= openid_form.text_field :email, :id => 'openid_email' %>
 </li>
 <li>
-  <%= openid_form.label :affiliation_name, 'Affiliation (optional)', :for => 'openid_affiliation' %>
+  <%= openid_form.label :affiliation_name, t(:openid_affiliation_optional), :for => 'openid_affiliation' %>
   <%= openid_form.text_field :affiliation_name, :id => 'openid_affiliation' %>
 </li>
 <li>
-  <%= openid_form.label :location_id, "Country", :for => 'openid_country' %>
+  <%= openid_form.label :location_id, t(:openid_country), :for => 'openid_country' %>
   <%= openid_form.select :location_id, all_countries_for_select, {}, :id => 'openid_country' %>
 </li>
 <li>
-  <%= openid_form.label :city, 'City', :for => 'openid_city' %>
+  <%= openid_form.label :city, t(:openid_city), :for => 'openid_city' %>
   <%= openid_form.text_field :city, :id => 'openid_city' %>
 </li>
 <li>
-  <%= openid_form.label :user_type, 'User Type', :for => 'openid_user_type' %>
+  <%= openid_form.label :user_type, t(:openid_user_type), :for => 'openid_user_type' %>
   <%= openid_form.select :user_type, User::USER_TYPES, { :include_blank => true }, { :id => 'openid_user_type' } %>
 </li>
 <li>
-  <%= openid_form.label :personal_url, 'Site Url (optional)', :for => 'openid_personal_url' %>
+  <%= openid_form.label :personal_url, t(:openid_site_url_optional), :for => 'openid_personal_url' %>
   <%= openid_form.text_field :personal_url, :id => 'openid_personal_url' %>
 </li>
 <li>
-  <%= openid_form.label :telephone_number, 'Cell Phone (optional)', :for => 'openid_telephone_number' %>
+  <%= openid_form.label :telephone_number, t(:openid_cellphone_optional), :for => 'openid_telephone_number' %>
   <%= openid_form.text_field :telephone_number, :id => 'openid_telephone_number' %>
 </li>
-
-<li class='signIn_cues'>
-  <%= openid_form.check_box :list_opt_in, :class => 'checkbox', :id => 'openid_list_opt_in' %>
-  <%= openid_form.label :list_opt_in, 'Yes, email me updates from Population Council.', :class => 'inline', :for => 'openid_list_opt_in' %>
-</li> 

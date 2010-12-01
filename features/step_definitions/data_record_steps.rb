@@ -69,6 +69,14 @@ When /^I sort by "([^\"]+)" (\w+)$/ do |field, order|
   When %Q(I follow "#{field}") if order == "descending"
 end
 
+When /^I sort by "([^\"]+)" translated (\w+)$/ do |field, order|
+  # Clicking the sorting link the first time sorts descending,
+  # clicking it the second time sorts ascending
+  When %Q(I follow the translation of "#{field}")
+  When %Q(I follow the translation of "#{field}") if order == "descending"
+end
+
+
 Then /^I should see the favorited data record$/ do
   Then %Q(I should see "#{the.data_record.title}")
 end
@@ -112,11 +120,11 @@ Then /^I should be browsing records created on (\d+)$/ do |year|
 end
 
 Then /^the contact (\w+) field should contain the user's (\w+)$/ do |field, attribute|
-  Then %Q(the "#{field.titleize}" field should contain "#{the.user.send(attribute)}")
+  Then %Q(the "#{field}" field should contain "#{the.user.send(attribute)}")
 end
 
 Then /^the contact (\w+) field should be blank$/ do |field|
-  find_field(field.titleize)["value"].should be_blank
+  find_field(I18n.t(field))["value"].should be_blank
 end
 
 Then /^"([^\"]+)" should come before "([^\"]+)"$/ do |first_title, second_title|
