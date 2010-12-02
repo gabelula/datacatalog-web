@@ -126,7 +126,7 @@ Then /^I should see "([^\"]*)"$/ do |text|
   page.should have_content(text)
 end
 
-Then /^I should see a translation of "([^\"]*)"$/ do |key|
+Then /^I should see the translation of "([^\"]*)"$/ do |key|
   page.should have_content(I18n.t(key))
 end
 
@@ -134,7 +134,7 @@ Then /^I should not see "([^\"]*)"$/ do |text|
   page.should_not have_content(text)
 end
 
-Then /^I should not see a translation of "([^\"]*)"$/ do |text|
+Then /^I should not see the translation of "([^\"]*)"$/ do |text|
   page.should_not have_content(text)
 end
 
