@@ -17,9 +17,9 @@ module LocationsHelper
 
     locations = []
     locations += preferential
-    locations << [t(Location.global.name), get_id[Location.global]]
+    locations << [I18n.t(Location.global.name), get_id[Location.global]]
     locations << "-------------"
-    locations += Location.countries.map {|c| [t(c.name), get_id[c]] }.sort_by {|name, _| name }
+    locations += Location.countries.map {|c| [I18n.t(c.name), get_id[c]] }.sort_by {|name, _| name }
     locations
   end
 end
