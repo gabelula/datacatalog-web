@@ -32,6 +32,10 @@ When /^I fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
   fill_in(I18n.t(field), :with => value)
 end
 
+When /^I fill by input id in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
+
 # I fill in the 2nd "Field" with "Value"
 When /^I fill in the (\w+) "([^\"]*)" with "([^\"]*)"$/ do |position, field, value|
   first_field = find_field(field)
@@ -44,6 +48,10 @@ end
 
 When /^I select "([^\"]*)" from the translation of "([^\"]*)"$/ do |value, field|
   select(value, :from => I18n.t(field))
+end
+
+When /^I select "([^\"]*)" by input id "([^\"]*)"$/ do |value, field|
+  select(value, :from => field)
 end
 
 # I select "Value" from the 2nd "Field"

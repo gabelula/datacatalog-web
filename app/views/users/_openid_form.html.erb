@@ -1,6 +1,6 @@
 <li>
-  <%= openid_form.label :openid_identifier, t(:openid_url) %>
-  <%= openid_form.text_field :openid_identifier %>
+  <%= openid_form.label :openid_identifier, t(:openid_url), :for => 'openid_identifier' %>
+  <%= openid_form.text_field :openid_identifier, :id => 'openid_identifier' %>
 </li>
 <li>
   <%= openid_form.label :display_name, t(:openid_name), :for => 'openid_name' %>
