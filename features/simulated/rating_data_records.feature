@@ -60,5 +60,5 @@ Feature: Rating data records
     Given I am a site visitor
     And I am on the data record's page
     And I rate it 4 stars
-    Then I should see "You must be logged in to take that action"
+    Then I should see the translation of "message_you_must_be_logged_in_to_take_that_action"
     And I should be on the sign in page

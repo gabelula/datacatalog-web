@@ -11,7 +11,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new params[:user_session]
 
     if @user_session.save
-      flash[:notice] = "You have been signed in."
+      flash[:notice] = t(:text_you_have_been_signed_in)
       redirect_to session.delete(:return_to) || root_path
     else
       render :action => "new" and return

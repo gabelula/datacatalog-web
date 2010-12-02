@@ -2,7 +2,7 @@
   <div class="stars" id="overallRating">
     <h3 class="textReplace withTip" id="header_overall"><%=t(:text_overall_rating)%></h3>
     <%= render 'ratings/stars', :rating => rateable.ratings_average %>
-    <div class="tip"><%=t(:text_averaged_from)%><%= pluralize(rateable.ratings_count, "vote") %>)</div>
+    <div class="tip"><%=t(:text_averaged_from)%> <%= pluralize(rateable.ratings_count, "vote") %>)</div>
   </div>
   <div class="stars" id="yourRating">
     <h3 class="textReplace" id="header_your"><%=t(:text_your_rating)%></h3>

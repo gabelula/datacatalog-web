@@ -30,4 +30,4 @@ Feature: Editing data record
     Given I am a site visitor
     When I go to the browse page
     And I follow "Child Birth"
-    Then I should not see a translation of "label_update"
+    Then I should not see the translation of "label_update"

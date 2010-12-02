@@ -91,7 +91,7 @@ Feature: Browsing data records
     Then I should see a record tagged "diseases"
     When I follow "diseases"
     Then I should only see 3 records
-    And I should see a translation of "label_browse_by_tag"
+    And I should see the translation of "label_browse_by_tag"
     When I follow the translation of "label_view_all"
     Then I should see 7 records
 

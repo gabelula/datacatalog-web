@@ -24,11 +24,11 @@
       <%= f.error_messages custom_error_messages %>
       <ul id="standard_signin">
         <li>
-          <%= f.label :email %>
+          <%= f.label :email, t(:email) %>
           <%= f.text_field :email %>
         </li>
         <li>
-          <%= f.label :password %>
+          <%= f.label :password, t(:password)  %>
           <%= f.password_field :password %>
         </li>
         <li class="signIn_cues">
@@ -38,7 +38,7 @@
         </li>
         <li>
           <button class="signIn" id="user_session_submit" type="submit" value="Sign In" name="commit">
-            <span><%=t(:text_sign_in)%></span>
+            <span><%=t(:label_sign_in)%></span>
           </button>
         </li>
       </ul>

@@ -16,7 +16,7 @@ Feature: Sign up
     And I select "Journalist" from the translation of "user_type"
     And I press "Sign Up"
     Then my account should be created
-    And I should see a translation of "your_account_has_been_created"
+    And I should see the translation of "your_account_has_been_created"
 
   Scenario: Sign up with wrong password confirmation
     Given I am a site visitor
@@ -27,7 +27,7 @@ Feature: Sign up
     And I fill in "confirm_password" with "sekrit"
     And I press "Sign Up"
     Then my account should not be created
-    And I should see a translation of "password_doesnt_match_confirmation"
+    And I should see the translation of "password_doesnt_match_confirmation"
 
   Scenario: Attempt to sign up with email address already in system
     Given I am a site visitor who already has signed up with "jane@test.com"
@@ -37,9 +37,9 @@ Feature: Sign up
     And I fill in "password" with "s3krit"
     And I fill in "confirm_password" with "s3krit"
     And I press "Sign Up"
-    Then I should see a translation of "email_has_already_been_taken"
+    Then I should see the translation of "email_has_already_been_taken"
 
   Scenario: Confirm my email address after signing up
     Given I have signed up but not yet confirmed
     When I click on the confirmation link
-    Then I should see a translation of "thanks_you_are_now_signed_in"
+    Then I should see the translation of "thanks_you_are_now_signed_in"

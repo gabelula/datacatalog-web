@@ -16,4 +16,4 @@ Feature: Sign up via OpenID
     And I select "Journalist" from the translation of "openid_user_type"
     And I press the translation of "text_sign_up_with_openid"
     Then my OpenID-enabled account should be created
-    And I should see a translation of "success_you_have_been_signed_in"
+    And I should see the translation of "success_you_have_been_signed_in"

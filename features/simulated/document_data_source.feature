@@ -11,7 +11,7 @@ Feature: Help document a data source
   Scenario: View an undocumented data record
     Given the data record is not documented
     When I browse to the data record's documentation
-    Then I should see a translation of "text_this_data_source_doesn_t_have_any_documentation_yet"
+    Then I should see the translation of "text_this_data_source_doesn_t_have_any_documentation_yet"
 
   Scenario: View a documented data record
     Given the data record is documented
@@ -31,7 +31,7 @@ Feature: Help document a data source
     And I am a site visitor
     When I browse to the data record's documentation
     When I follow the translation of "<link>"
-    Then I should see a translation of "message_you_must_be_logged_in_to_take_that_action" 
+    Then I should see the translation of "message_you_must_be_logged_in_to_take_that_action" 
     And I should be on the sign in page
 
     Examples:

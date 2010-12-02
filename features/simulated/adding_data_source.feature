@@ -6,8 +6,8 @@ Feature: Adding data source
   Scenario: A guest can't add a new data source
     Given I am a site visitor
     When I follow the translation of "label_add_data"
-    Then I should see a translation of "message_you_must_be_logged_in_to_take_that_action"
-    And I should not see translation of "text_add_data_source"
+    Then I should see the translation of "message_you_must_be_logged_in_to_take_that_action"
+    And I should not see the translation of "text_add_data_source"
 
   @javascript
   Scenario Outline: A user adds a new data source
@@ -15,7 +15,7 @@ Feature: Adding data source
     When I follow the translation of "label_add_data"
     And I fill in the data record fields
     And I press the translation of "text_submit"
-    Then I should see a translation of "message_your_data_has_been_submitted"
+    Then I should see the translation of "message_your_data_has_been_submitted"
     And the data record should be created by a <role>
 
     Examples:
@@ -32,7 +32,7 @@ Feature: Adding data source
     And I select "Johnny Minister" from the translation of "text_added_by"
     And I fill in the data record fields
     And I press the translation of "text_submit"
-    Then I should see a translation of "message_your_data_has_been_submitted"
+    Then I should see the translation of "message_your_data_has_been_submitted"
     And the data record should be created by a ministry user
 
   Scenario: An admin adds a new data source with errors
@@ -41,8 +41,8 @@ Feature: Adding data source
     And I fill in "text_title" with ""
     And I fill in "text_lead_organization" with "Some Org"
     And I press the translation of "text_submit"
-    Then I should not see a translation of "message_your_data_has_been_submitted"
-    And I should see a translation of "title_cant_be_blank" 
+    Then I should not see the translation of "message_your_data_has_been_submitted"
+    And I should see the translation of "title_cant_be_blank" 
     And there should be no organizations
 
   Scenario Outline: Creating organizations if they don't exist yet
@@ -53,7 +53,7 @@ Feature: Adding data source
     And I fill in "text_lead_organization" with "<name>"
     And I fill in "text_other_institutional_collaborators" with "<collaborators>"
     And I press the translation of "text_submit"
-    Then I should see a translation of "message_your_data_has_been_submitted"
+    Then I should see the translation of "message_your_data_has_been_submitted"
     And there should be <count> organizations
     And the data record's lead organization should be "<name>"
 
@@ -68,7 +68,7 @@ Feature: Adding data source
     Given I am a signed in user
     And I am affiliated to "Red Cross International"
     When I follow the translation of "label_add_data"
-    Then the "text_lead_organization" field should contain "Red Cross International"
+    Then the translation of "text_lead_organization" field should contain "Red Cross International"
 
 #  @javascript
 #  Scenario: A data record can have up to 3 authors

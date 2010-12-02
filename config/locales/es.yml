@@ -283,3 +283,18 @@
 
       full_messages:
         format: "%{attribute} %{message}"
+
+  # For authologic gem
+  authlogic:
+    error_messages:
+      login_blank: "no puede estar vacio"
+      login_not_found: "no es valido"
+      login_invalid: " deberia usar solo letras, numeros, espacios y .-@ porfavor."
+      consecutive_failed_logins_limit_exceeded: "El limite de fallas al loguearse consecutivas ha sido excedido, la cuenta esta deshabilitada."
+      email_invalid: "deberia parecer una direccion de correo electronico."
+      password_blank: "no puede estar vacio"
+      password_invalid: "no es valido"
+      not_active: "Tu cuenta no esta activada."
+      not_confirmed: "Tu cuenta aun no ha sido confirmada."
+      not_approved: "Tu cuenta no esta aprobada."
+      no_authentication_details: "No has dado ningun detalle para la autenticacion."

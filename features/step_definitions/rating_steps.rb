@@ -28,5 +28,5 @@ Then /^I should see the average rating is (\d+)$/ do |stars|
 end
 
 Then /^I should see it was rated by (\d+) people$/ do |count|
-  page.should have_content("averaged from #{count}")
+  page.should have_content("#{I18n.t(:text_averaged_from)} #{count}")
 end

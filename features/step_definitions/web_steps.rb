@@ -16,7 +16,6 @@ When /^I press "([^\"]*)"$/ do |button|
 end
 
 When /^I press the translation of "([^\"]*)"$/ do |button|
-  save_and_open_page
   click_button(I18n.t(button))
 end
 
@@ -127,6 +126,9 @@ Then /^I should see "([^\"]*)"$/ do |text|
 end
 
 Then /^I should see the translation of "([^\"]*)"$/ do |key|
+  if (key == "text_your_acount_is_not_confirmed")
+    save_and_open_page
+  end
   page.should have_content(I18n.t(key))
 end
 
@@ -138,8 +140,11 @@ Then /^I should not see the translation of "([^\"]*)"$/ do |text|
   page.should_not have_content(text)
 end
 
-
 Then /^the "([^\"]*)" field should contain "([^\"]*)"$/ do |field, value|
+  field_labeled(field).value.should =~ /#{value}/
+end
+
+Then /^the translation of "([^\"]*)" field should contain "([^\"]*)"$/ do |field, value|
   field_labeled(I18n.t(field)).value.should =~ /#{value}/
 end
 

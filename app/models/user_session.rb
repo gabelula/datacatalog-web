@@ -5,7 +5,9 @@ class UserSession < Authlogic::Session::Base
   private
 
   def check_confirmed_user
-    #errors.add_to_base("Your account is not confirmed!") unless self.attempted_record.confirmed?
+    if !self.attempted_record.nil?
+      errors.add_to_base(t(:text_your_account_is_not_confirmed)) unless self.attempted_record.confirmed?
+    end
   end
 
 end

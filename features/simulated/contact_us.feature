@@ -27,7 +27,7 @@ Feature: Contact Us
     And I fill in "name" with "Ted Allen"
     And I fill in "email_address" with "ted@email.com"
     And I press "Submit"
-    Then I should see a translation of "comments_cant_be_blank"
+    Then I should see the translation of "comments_cant_be_blank"
 
   Scenario: View contact form as logged in user
     Given I am signed in

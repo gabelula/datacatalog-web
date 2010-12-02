@@ -110,17 +110,17 @@ end
 
 Then /^I should be browsing filtered by the "([^\"]+)" tag$/ do |tag|
   Then %Q(I should be on the browse page)
-  Then %Q(I should see a translation of "label_browse_by_tag")
+  Then %Q(I should see the translation of "label_browse_by_tag")
   Then %Q(I should see a record tagged "#{tag}")
 end
 
 Then /^I should be browsing records created on (\d+)$/ do |year|
   Then %Q(I should be on the browse page)
-  Then %Q(the "Release Year" field should contain "#{year}")
+  Then %Q(the translation of "label_release_year" field should contain "#{year}")
 end
 
 Then /^the contact (\w+) field should contain the user's (\w+)$/ do |field, attribute|
-  Then %Q(the "#{field}" field should contain "#{the.user.send(attribute)}")
+  Then %Q(the translation of "#{field}" field should contain "#{the.user.send(attribute)}")
 end
 
 Then /^the contact (\w+) field should be blank$/ do |field|
