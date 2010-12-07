@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
 
   helper :all
   helper_method :current_user_session, :current_user
-  filter_parameter_logging :password, :password_confirmation
   before_filter :show_title, :mailer_set_url_options, :set_analytics, :set_avatar
 
   unless ["development", "test"].include?(Rails.env)
