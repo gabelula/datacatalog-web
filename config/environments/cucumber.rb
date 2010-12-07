@@ -1,4 +1,4 @@
-require Rails.root.to_s + "/lib/utilities"
+require ::Rails.root.to_s + "/lib/utilities"
 
 config.cache_classes = true
 

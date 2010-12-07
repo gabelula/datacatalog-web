@@ -1,9 +1,8 @@
 source :rubygems
 
-gem 'rails', '2.3.8'
-#gem 'pg'
+gem 'rails', '3.0.0'
 gem 'mysql'
-gem 'authlogic', '>= 2.1.1'
+gem 'authlogic', '>= 2.1.6'
 gem "authlogic-oid", '>= 1.0.4', :require => "authlogic_openid"
 gem "ruby-openid", '>= 2.1.7', :require => "openid"
 gem 'nokogiri', '>= 1.3.2'
@@ -15,22 +14,23 @@ gem 'paperclip', '>= 2.3.3'
 gem 'aws-s3', '>= 0.6.2'
 gem 'awesome_nested_set', '1.4.3'
 gem 'will_paginate', '2.3.15'
-gem 'acts_as_versioned', :git => "git://github.com/technoweenie/acts_as_versioned.git", :tag => "rails_2"
-gem 'i18n', '0.4.1'
+gem 'acts_as_versioned', :git => "git://github.com/xspond/acts_as_versioned.git", :branch => "rails3"
 
 group :test do
-  gem "rspec-rails", ">= 1.2.0", :require => false
-  gem 'thoughtbot-shoulda', ">= 2.10.0", :require => 'shoulda'
+  gem 'shoulda', ">= 2.10.0", :require => 'shoulda'
   gem 'rr', '>= 0.10.0'
   gem 'machinist', ">= 1.0.6"
   gem 'faker', '>= 0.3.1'
-
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'cucumber-rails'
-  gem 'database_cleaner', '0.5.2'
+  gem 'cucumber'
+  gem 'rspec-rails'
+  gem 'spork'
+  gem 'launchy'    # So you can do Then show me the page
 end
 
 group :development, :test do
   gem 'mongrel'
   gem 'ruby-debug'
-end 
+end
