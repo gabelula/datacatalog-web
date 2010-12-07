@@ -42,5 +42,7 @@ DatacatalogWeb::Application.routes.draw do
   match 'data/:slug/docs/:id' => 'data#show_doc', :as => :source_show_doc
   match 'data/:slug/docs/:id/update' => 'data#update_doc', :as => :source_update_doc
   match 'data/:slug/usages' => 'data#usages', :as => :source_usages
+
+  root :to => "dashboard#main"
   match '/:controller(/:action(/:id))'
 end
