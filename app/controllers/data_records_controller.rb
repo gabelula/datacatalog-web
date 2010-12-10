@@ -3,7 +3,7 @@ class DataRecordsController < ApplicationController
   before_filter :find_data_record, :only => [:show, :edit, :update]
   before_filter :require_owner_or_admin, :only => [:edit, :update]
 
-  include BrowseTableSorts
+  include ::BrowseTableSorts
 
   def index
     @filters = Filters.new(params[:filters])
