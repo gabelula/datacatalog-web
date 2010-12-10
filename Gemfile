@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'rails', '3.0.0'
 gem 'mysql'
-gem 'authlogic', '>= 2.1.6'
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3' 
 gem "authlogic-oid", '>= 1.0.4', :require => "authlogic_openid"
 gem "ruby-openid", '>= 2.1.7', :require => "openid"
 gem 'nokogiri', '>= 1.3.2'
