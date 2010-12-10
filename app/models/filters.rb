@@ -15,4 +15,5 @@ class Filters < OpenStruct
   def any?
     @table.any? {|_,v| v.present? }
   end
+
 end
