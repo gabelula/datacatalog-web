@@ -5,4 +5,4 @@ es:
   name: "Nombre"
   email_address: "Correo Electronico"
   comments: "Comentarios"
-  comments_cant_be_blank: "Comments no puede estar vacio."
+  comments_cant_be_blank: "Comments no puede estar en blanco"

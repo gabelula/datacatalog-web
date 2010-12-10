@@ -216,7 +216,7 @@ es:
   text_you_have_no_favorites_yet: "Tu aun no tienes favoritos."
   text_you_ll_need_to: "Vas a necesitar"
   text_your_rating: "Tu Voto"
-  title_cant_be_blank: "Title no puede estar vacio"
+  title_cant_be_blank: "Title no puede estar en blanco"
   add_location: "+ Agregar Región"
   add_document: "+ Agregar Documento"
   add_author: "+ Agregar Autor"
