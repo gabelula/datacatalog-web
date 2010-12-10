@@ -1,25 +1,27 @@
 DatacatalogWeb::Application.routes.draw do
   resources :data_records do
-    resource :favorite
-    resource :rating
-    resources :notes
-    resources :comments do
-      resources :votes
+    resource :favorite, :only => [ :create, :destroy ]
+    resource :rating, :only => [ :update ]
+    resources :notes, :only => [ :index, :create ]
+    resources :comments, :only => [ :create ]  do
+      resources :votes, :only => [ :create ]
     end
-    resource :wiki
+    resource :wiki, :as => "docs", :only => [ :show, :edit, :update ]
   end
 
-  resources :organizations
+  resources :organizations, :as => :org, :only => [ :show ]
+
   namespace :admin do
-    resources :organizations
-    resources :data_records
-    resources :users
-    resources :contact_submissions
+    resources :organizations, :only => [ :index, :show, :new, :create, :update ]
+    resources :data_records, :only => [ :index ]
+    resources :users, :only => [ :index, :show, :new, :create, :update ]
+    resources :contact_submissions, :only => [ :index, :show, :update ]
   end
 
-  resources :users
-  resource :profile
+  resources :users, :only => [ :new, :create ]
+  resource :profile, :controller => "users", :only => [ :edit, :update ]
   resource :user_session
+
   match '/' => 'main#dashboard'
   match 'about' => 'main#about', :as => :about
   match 'blog' => 'main#blog', :as => :blog
