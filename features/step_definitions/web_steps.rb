@@ -134,9 +134,6 @@ Then /^I should see "([^\"]*)"$/ do |text|
 end
 
 Then /^I should see the translation of "([^\"]*)"$/ do |key|
-  if (key == "text_your_acount_is_not_confirmed")
-    save_and_open_page
-  end
   page.should have_content(I18n.t(key))
 end
 
