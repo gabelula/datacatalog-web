@@ -18,6 +18,8 @@ class DataRecord < ActiveRecord::Base
   has_many :authors, :dependent => :destroy
 
   has_one :wiki, :dependent => :destroy
+  # BAD FIX
+  has_many :contact, :dependent => :destroy
 
   has_many :documents, :dependent => :destroy
   has_many :favorites, :dependent => :destroy
