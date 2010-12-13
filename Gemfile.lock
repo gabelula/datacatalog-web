@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/FreakyDazio/awesome_nested_set.git
+  revision: 286aa1da6df6422ae158d5c92227d6211e9feaf1
+  specs:
+    awesome_nested_set (1.4.3)
+      activerecord (>= 1.1)
+
+GIT
   remote: git://github.com/odorcicd/authlogic.git
   revision: a087ad0cba3c165ba22fcf176c28b6f7517931e8
   branch: rails3
@@ -47,8 +54,6 @@ GEM
       activesupport (~> 3.0.0)
     authlogic-oid (1.0.4)
       authlogic
-    awesome_nested_set (1.4.3)
-      activerecord (>= 1.1)
     aws-s3 (0.6.2)
       builder
       mime-types
@@ -197,7 +202,7 @@ DEPENDENCIES
   acts_as_versioned!
   authlogic!
   authlogic-oid (>= 1.0.4)
-  awesome_nested_set (= 1.4.3)
+  awesome_nested_set!
   aws-s3 (>= 0.6.2)
   capybara
   cucumber

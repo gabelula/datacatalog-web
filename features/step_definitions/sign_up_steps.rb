@@ -4,12 +4,12 @@ end
 
 Given /^I have signed up(?: with "(.*)")?(?: and confirmed)?$/ do |email|
   Given %Q(I have signed up with "#{email || "some@email.com"}" but not yet confirmed)
-  the.user.confirm!
+  @user.confirm!
 end
 
 Given /^I am a site visitor who already has signed up with "([^\"]*)"$/ do |email|
   Given %Q(I have signed up with "#{email}")
-  @user = User.find_by_email(the.user.email)
+  @user = User.find_by_email(@user.email)
 end
 
 Given /^I am a site visitor who had an admin account created with "([^\"]*)" by an admin$/ do |email|
@@ -21,7 +21,7 @@ Given /^I am a site visitor who had an admin account created with "([^\"]*)" by 
 end
 
 Given /^I have signed up(?: with "(.*)")? but not yet confirmed$/ do |email|
-  the.user = User.make(:email => email || "some@email.com", :display_name => "John D.")
+  @user = User.make(:email => email || "some@email.com", :display_name => "John D.")
 end
 
 Given /^I have signed up via OpenID but not yet confirmed$/ do

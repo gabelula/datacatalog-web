@@ -6,6 +6,7 @@
 
 ENV["RAILS_ENV"] ||= "test"
 require File.expand_path(File.dirname(__FILE__) + '/../../config/environment')
+require File.expand_path(File.dirname(__FILE__) + '/blueprints')
 
 require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
 require 'cucumber/rails/rspec'
@@ -52,7 +53,20 @@ Cucumber::Rails::World.use_transactional_fixtures = true
 if defined?(ActiveRecord::Base)
   begin
     require 'database_cleaner'
-    DatabaseCleaner.strategy = :truncation
+    require 'database_cleaner/cucumber'
+    require File.expand_path("db/seeds.rb")
+    DatabaseCleaner.strategy = :truncation, {:except => %w[locations]}
   rescue LoadError => ignore_if_database_cleaner_not_present
   end
 end
+
+ActionController::Base.class_eval do
+  private
+
+  def begin_open_id_authentication(identity_url, options = {})
+    yield OpenIdAuthentication::Result.new(:successful), normalize_identifier(identity_url), nil
+  end
+
+end
+
+#World(DefiniteArticleHelper)

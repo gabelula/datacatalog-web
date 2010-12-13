@@ -5,7 +5,7 @@ require 'faker'
 DataRecord.blueprint do
   title                  { Faker::Lorem.sentence }
   description            { Faker::Lorem.paragraph }
-  data_record_locations  { [DataRecordLocation.new(:location_id => Location.all.random_element.id)] }
+  data_record_locations  { [DataRecordLocation.new(:location_id => Location.first.id)] }
   documents              { [Document.make] }
   year                   1990
   owner                  { User.make }
@@ -19,7 +19,7 @@ User.blueprint do
   email                 { Faker::Internet.email }
   password              "test"
   password_confirmation "test"
-  location              { Location.countries.random_element }
+  location              { Location.countries.first }
   city                  "Kampala"
   user_type             "Journalist"
   role                  "basic"
@@ -27,7 +27,7 @@ end
 
 Organization.blueprint do
   name      { Faker::Company.name }
-  location  { Location.countries.random_element }
+  location  { Location.countries.first }
   url       { Faker::Internet.domain_name }
   org_type  "Governmental"
 end

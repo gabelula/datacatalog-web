@@ -12,7 +12,7 @@ gem 'delayed_job', '>= 1.8.4'
 gem 'unindentable', '>= 0.0.1'
 gem 'paperclip', '>= 2.3.3'
 gem 'aws-s3', '>= 0.6.2'
-gem 'awesome_nested_set', '1.4.3'
+gem 'awesome_nested_set', :git => "git://github.com/FreakyDazio/awesome_nested_set.git"
 gem 'will_paginate', '2.3.15'
 gem 'acts_as_versioned', :git => "git://github.com/xspond/acts_as_versioned.git", :branch => "rails3"
 
