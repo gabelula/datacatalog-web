@@ -28,7 +28,7 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
 
   config.action_controller.session = {
-    :session_key => 'natdatcat',
+    :key => 'natdatcat',
     :secret      => 'f3f57b71ef9345ffccd0c4e841d8e74bb2e7d2ef692a506aa6c2a3c29d584a55dd18426ffc04610be49956a51af'
   }
 
